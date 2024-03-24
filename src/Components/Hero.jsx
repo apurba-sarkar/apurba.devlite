@@ -1,0 +1,22 @@
+import Typewriter from "typewriter-effect";
+
+const Hero = () => {
+  return (
+    <div>
+      <div>APURBA</div>
+      <div> I am a</div>
+
+      <div style={{color:"green"}}>
+        <Typewriter
+          options={{
+            strings: ["Hello", "World"],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Hero;

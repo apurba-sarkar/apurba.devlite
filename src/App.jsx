@@ -1,8 +1,13 @@
+import Hero from "./Components/Hero";
+import Nav from "./Components/Nav";
 
 const App = () => {
   return (
-    <div>ricky</div>
-  )
-}
+    <div>
+      <Nav />
+      <Hero />
+    </div>
+  );
+};
 
-export default App
+export default App;
