@@ -23,20 +23,18 @@ const Data = () => {
         >
           <button
             style={{
-            //   width: "6rem",
+              //   width: "6rem",
               padding: ".8rem 1rem",
               borderRadius: "2rem",
               backgroundColor: "var(--main-color)",
               color: "white",
               border: "none",
               cursor: "pointer",
-              fontSize:"1rem",
-              fontWeight:"bold",
-              
+              fontSize: "1rem",
+              fontWeight: "bold",
             }}
             onClick={() => (
-              window.open("https://www.linkedin.com/in/sarkar-apurba"),
-              "_blank"
+              window.open("https://www.linkedin.com/in/sarkar-apurba"), "_blank"
             )}
           >
             <div
@@ -50,7 +48,7 @@ const Data = () => {
         </div>
       </div>
       <Header2 />
-      <Nav />
+   
     </div>
   );
 };
