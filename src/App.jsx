@@ -20,7 +20,7 @@ const App = () => {
           // backgroundColor: "wheat"
         }}
       >
-        {/* <Hero /> */}
+    
         <Header />
 
         <Data />

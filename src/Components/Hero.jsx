@@ -6,7 +6,7 @@ const Hero = () => {
       <div>APURBA</div>
       <div> I am a</div>
 
-      <div style={{color:"green"}}>
+      <div style={{color:"blue"}}>
         <Typewriter
           options={{
             strings: ["Hello", "World"],

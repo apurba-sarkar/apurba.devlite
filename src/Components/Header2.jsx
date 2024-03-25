@@ -5,6 +5,10 @@ import { FaBirthdayCake } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 import "./style.css";
+
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
 const Header2 = () => {
   return (
     <div style={{ marginTop: "-1rem" }}>
@@ -29,9 +33,9 @@ const Header2 = () => {
           <LuBadgeCheck style={{ fontSize: "1.5rem" }} />
         </div>
       </div>
-      <div>
+      <div style={{fontSize:"1.1rem", }}>
         <div>Innovate with every line of code ! ✨ </div>
-        <div>
+        <div style={{lineHeight:"1.3 rem"}}>
           {" "}
           Web Developer. React Native Developer. Analyst. Content Writer. IT
           Trainer Specialist{" "}
@@ -55,20 +59,31 @@ const Header2 = () => {
           </div>
           <div className="small">
             <FaBirthdayCake />
-            <div>Birthday</div>
+            <div>June 17th</div>
           </div>
           <div className="small">
             <FaCalendarAlt />
-            <div>Joinned</div>
+            <div>Created March 25th</div>
           </div>
         </div>
-        <div style={{ display: "flex", flexDirection: "column" ,justifyContent:"center",alignItems:"center"}}>
-          <div style={{marginTop:"2rem"}}>Keep up to date with my latest projects and adventures</div>
-          <div>
-            <div><input type="text" placeholder="enter your email" /></div>
-            <div>button</div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div style={{ marginTop: "2rem" }}>
+            Keep up to date with my latest projects and Technologies
           </div>
-          <div>No Spam, Unscribe me any time</div>
+          <div style={{ display: "flex",alignItems:"center", justifyContent:"center"}}>
+            <div>
+              <input className="inputtext" type="text" placeholder="enter your email" />
+            </div>
+            <button className="sendbutton">Send</button>
+          </div>
+          <div style={{marginTop:"1rem",fontSize:".9rem",paddingBottom:"1.5rem"}}>No Spam, Unsubscribe me any time</div>
         </div>
       </div>
     </div>

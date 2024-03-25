@@ -1,24 +1,25 @@
+import { NavLink } from "react-router-dom";
+
 const Nav = () => {
   return (
     <nav
       style={{
         display: "flex",
         justifyContent: "center",
-        gap: "1rem",
+        gap: "2rem",
         // flexDirection: "column",
       }}
     >
-      <div>0. ABOUT</div>
+      <NavLink to="/feed">Feed</NavLink>
 
-      <div>1. SKILLS </div>
+      <NavLink to="/about">About </NavLink>
 
-      <div>2. WORK</div>
+      <NavLink to="/content">Content</NavLink>
 
-      <div>3. PROJECTS </div>
+      <NavLink to="projects">Projects</NavLink>
+      <NavLink to="contact">Contact</NavLink>
 
-      <div>4. CONTACT</div>
-
-      <div>5. RESUME</div>
+      <NavLink to="guestbook">Guestbook</NavLink>
     </nav>
   );
 };
