@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   return (
-    <div>
+    <div style={{color:"white"}}>
       <div>APURBA</div>
       <div> I am a</div>
 

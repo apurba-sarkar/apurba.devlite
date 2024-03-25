@@ -66,6 +66,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
-body{
-   font-family: "Mukta"
+body {
+  font-family: "Mukta";
+  /* margin-bottom: -2rem; */
+  margin: 0;
+  /* background-color: black;
+   color:"white" */
+}
+
+html {
+  /* font-size: 62.5%; */
 }

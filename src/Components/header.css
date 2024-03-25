@@ -1,0 +1,16 @@
+.image{
+    height: 9rem;
+    aspect-ratio: 1;
+    /* width: 10rem; */
+    border-radius: 50%;
+    border: .3rem solid #cc0088;
+
+        transform: scaleX(-1)
+}
+
+
+/* colors:  */
+/* ##C822FF */
+/* #1A6DFF */
+/* #E6ABFF
+#6DC7FF */

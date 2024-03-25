@@ -1,0 +1,11 @@
+:root {
+  --main-color: #cc0088;
+  --secondary-color: #495057;
+}
+
+.small {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 0.3rem;
+}
