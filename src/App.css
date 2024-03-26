@@ -13,3 +13,8 @@ a:active {
 .active {
   border-bottom: .2rem solid #cc0088;
 }
+
+body::selection {
+  background-color: #ffcc00; /* Change this to the desired color */
+  color: #e12424; /* Change this to the desired text color */
+}

@@ -1,8 +1,8 @@
 import { FaLinkedinIn } from "react-icons/fa";
-import Nav from "./Nav";
+
 import Header2 from "./Header2";
-import { NavLink } from "react-router-dom";
-const Data = () => {
+
+const Profile = () => {
   return (
     <div style={{ padding: " 0 3rem", marginTop: "-5rem" }}>
       <div
@@ -48,9 +48,8 @@ const Data = () => {
         </div>
       </div>
       <Header2 />
-   
     </div>
   );
 };
 
-export default Data;
+export default Profile;

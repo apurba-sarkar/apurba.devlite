@@ -77,7 +77,7 @@ const Header2 = () => {
             alignItems: "center",
           }}
         >
-          <div style={{ marginTop: "2rem" }}>
+          <div style={{ marginTop: "1rem",marginBottom:".3rem" }}>
             Keep up to date with my latest projects and Technologies
           </div>
           <div
@@ -85,6 +85,7 @@ const Header2 = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+
             }}
           >
             <div>
@@ -101,7 +102,7 @@ const Header2 = () => {
           </div>
           <div
             style={{
-              marginTop: "1rem",
+              marginTop: ".5rem",
               fontSize: ".9rem",
               paddingBottom: "1.5rem",
             }}

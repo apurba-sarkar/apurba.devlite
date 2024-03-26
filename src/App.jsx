@@ -1,13 +1,7 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
-// import Hero from "./Components/Hero";
+
 import Nav from "./Components/Nav";
-// import ParticlesBg from "particles-bg";
-// import Particles from "react-particles";
 import Primary from "./Components/Primary";
-import Header from "./Components/Header";
-// import Header2 from "./Components/Header2";
 import Footer from "./Components/Footer";
-import Data from "./Components/Data";
 import { Routes, Route } from "react-router-dom";
 import About from "./pages/About";
 import Feed from "./pages/Feed";
@@ -16,6 +10,8 @@ import Content from "./pages/Content";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Guestbook from "./pages/Guestbook";
+import Profile from "./Components/Profile";
+import Banner from "./Components/Banner";
 
 const App = () => {
   return (
@@ -27,9 +23,9 @@ const App = () => {
           // backgroundColor: "wheat"
         }}
       >
-        <Header />
+        <Banner />
         {/* <Feed/> */}
-        <Data />
+        <Profile />
         <Nav />
         <Routes>
           <Route path="/about" element={<About />} />
