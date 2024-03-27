@@ -1,0 +1,8 @@
+.imgStyle img{
+height: 3rem;
+aspect-ratio: 1;
+margin-left: .5rem;
+/* display: flex; */
+/* flex-direction: row; */
+/* flex-direction: column; */
+}

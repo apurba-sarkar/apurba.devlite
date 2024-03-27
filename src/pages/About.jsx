@@ -1,26 +1,8 @@
-import { Application } from "@splinetool/runtime";
-import { useEffect, useRef } from "react";
+import "./Pagestyles/About.css";
 
 const About = () => {
-  // const canvas = document.getElementById("canvas3d");
-  // const app = new Application(canvas);
-  // app.load('https://prod.spline.design/zpWBGTduK7To3adQ/scene.splinecode');
-    const canvasRef = useRef(null);
-
-  useEffect(() => {
-    // const canvas = canvasRef.current;
-    // const app = new Application(canvas);
-    
-    // Load Spline scene when component mounts
-    // app.load("");
-
-    // Cleanup function
-    return () => {
-      // Cleanup code if necessary
-    };
-  }, []);
   return (
-    <div style={{ fontSize: "1.1rem" }}>
+    <div style={{ fontSize: "1.1rem", textAlign: "justify" }}>
       <div style={{ fontSize: "3rem", fontWeight: "bold" }}>Kon'nichiwa 👋</div>
       <div>
         I am <span style={{ color: "var(--main-color)" }}> Apurba Sarkar </span>
@@ -36,8 +18,62 @@ const About = () => {
         </span>{" "}
         . I currently work remotely as a developer on the web and mobile
         platforms. I do a lot of demos as well. I'm talking about a lot. When it
-        comes to coding, I like playing around with React, creating CSS with or
-        without JavaScript, getting geeky with Node, and working with databases.
+        comes to coding, I like playing around with React, creating CSS with
+        getting geeky with Node, and working with databases.
+      </div>
+      <div>
+        <div style={{ fontSize: "1.4rem" ,}}>Tech Stack</div>
+        <div>
+          <div>FrontEnd</div>
+          <div className="imgStyle">
+            <img src="html.png" alt="" />
+            <img src="css.png" alt="" />
+            <img src="js.png" alt="" />
+            <img style={{ marginLeft: ".5rem" }} src="ts.svg" alt="" />
+            <img src="tailwind.svg" alt="" />
+            <img src="bootstrap.png" alt="" />
+            <img src="react.png" alt="" />
+            <img src="astudio.svg" alt="" />
+            <img src="rq.svg" alt="" />
+            <img src="rtk.svg" alt="" />
+            <img src="mui.png" alt="" />
+          </div>
+          <div>
+            BackEnd
+            <div className="imgStyle">
+              {" "}
+              <img src="node-js.png" alt="" />
+              <img src="express.png" alt="" />
+              <img src="mongodb.png" alt="" />
+              <img src="mysql.png" alt="" />
+              <img src="PostgreSQL.png" alt="" />
+              <img src="supabase.svg" alt="" />
+              <img src="firebase.png" alt="" />{" "}
+              <img src="rest.png" alt="" />{" "}
+              <img src="vercel.svg" alt="" />{" "}
+            </div>
+          </div>
+
+          <div>
+            <div>Others</div>
+            <div className="imgStyle">
+              <img src="git.png" alt="" /> <img src="github.png" alt="" />{" "}
+              <img src="lc2.png" alt="" style={{ width: "6rem" }} />
+              <img src="webdriverio.png" alt="" />{" "}
+              <img src="postman.png" alt="" />{" "}
+              <img src="figma.png" alt="" />{" "}
+            </div>
+          </div>
+          <div className="imgStyle">
+            <div>Analysis</div>
+            <div>
+              {" "}
+              <img src="excel.png" alt="" /> <img src="powerbi.svg" alt="" />{" "}
+              <img src="python.png" alt="" />{" "}
+              <img src="vba.png" style={{ width: "5rem" }} alt="" />{" "}
+            </div>
+          </div>
+        </div>
       </div>
       <div style={{ marginTop: ".5rem" }}>
         I have a history of delivering outstanding results ahead of schedule.
@@ -45,6 +81,7 @@ const About = () => {
         accessibility, and performance. In addition to giving demos, I like to
         write articles, play games, and instruct at training facilities.
       </div>
+
       <div
         style={{ marginTop: ".5rem", fontSize: "1.2rem", fontWeight: "bold" }}
       >
@@ -54,11 +91,9 @@ const About = () => {
         style={{ marginTop: ".5rem", fontSize: "1.rem", fontWeight: "bold" }}
       >
         {" "}
-        Stay Awesome
+        Stay Connected
       </div>
       {/* <div > <img src="sign.svg" alt="" style={{height:"20rem"}} /></div> */}
-
-     
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Banner = () => {
   }
   return (
     <div>
-      <div style={{ height: "14rem"}}>
+      <div style={{ height: "16rem"}}>
       <canvas ref={canvasRef} id="canvas3d" />
       {/* <ParticlesBg type="polygon"  config={options} /> */}
         {/* <Hero/> */}
