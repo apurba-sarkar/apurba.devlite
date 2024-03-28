@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useState } from "react";
 
 const Primary = () => {
@@ -10,7 +11,7 @@ const Primary = () => {
         justifyContent: "space-between",
         padding: ".2rem 2rem",
         alignItems: "center",
-        height: "2.5rem",
+        // height: "2.5rem",
       }}
     >
       <div>

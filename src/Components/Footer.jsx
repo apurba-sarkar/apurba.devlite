@@ -1,12 +1,8 @@
-import React from "react";
-import { CiLinkedin } from "react-icons/ci";
-import { FaThreads } from "react-icons/fa6";
-import { CiFacebook } from "react-icons/ci";
-import { FaXTwitter } from "react-icons/fa6";
+
 import { FaMedium } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
+
 import { FaRssSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { BsFillThreadsFill } from "react-icons/bs";

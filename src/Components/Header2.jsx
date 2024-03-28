@@ -1,14 +1,12 @@
 import { LuBadgeCheck } from "react-icons/lu";
 import { RiHomeOfficeFill } from "react-icons/ri";
-import { PiLinkSimple } from "react-icons/pi";
 import { FaBirthdayCake } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 import "./style.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+
 
 const Header2 = () => {
   const toster = () => toast("request submitted");
@@ -49,6 +47,7 @@ const Header2 = () => {
             gap: "1rem",
             paddingTop: "1rem",
             color: "var(--secondary-color)",
+            flexWrap:"wrap"
           }}
         >
           <div className="small">

@@ -18,10 +18,7 @@ const App = () => {
     <div>
       <Primary />
       <div
-        style={{
-          padding: " 0 40rem",
-          // backgroundColor: "wheat"
-        }}
+       className="wrapper"
       >
         <Banner />
         {/* <Feed/> */}

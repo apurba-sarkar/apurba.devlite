@@ -4,13 +4,13 @@ import Header2 from "./Header2";
 
 const Profile = () => {
   return (
-    <div style={{ padding: " 0 3rem", marginTop: "-5rem" }}>
+    <div style={{ marginTop: "-5rem" }}>
       <div
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          gap: "6rem",
+          // gap: "6rem",
         }}
       >
         <div>
@@ -24,8 +24,8 @@ const Profile = () => {
           <button
             style={{
               //   width: "6rem",
-              padding: ".8rem 1rem",
-              borderRadius: "2rem",
+              // padding: ".8rem 1rem",
+              // borderRadius: "2rem",
               backgroundColor: "var(--main-color)",
               color: "white",
               border: "none",

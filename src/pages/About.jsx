@@ -79,7 +79,7 @@ const About = () => {
         I have a history of delivering outstanding results ahead of schedule.
         all the while paying close attention to well-structured code, design,
         accessibility, and performance. In addition to giving demos, I like to
-        write articles, play games, and instruct at training facilities.
+        write articles, watch animes, play games, and instruct at training facilities.
       </div>
 
       <div

@@ -1,8 +1,6 @@
 // import main from "main.jpg"
 import "./header.css";
-import Hero from "./Hero";
 import "./style.css"
-import ParticlesBg from 'particles-bg'
 import { Application } from "@splinetool/runtime";
 import { useEffect, useRef } from "react";
 const Banner = () => {
@@ -25,10 +23,8 @@ const Banner = () => {
   }
   return (
     <div>
-      <div style={{ height: "16rem"}}>
+      <div style={{ height: "13rem"}}>
       <canvas ref={canvasRef} id="canvas3d" />
-      {/* <ParticlesBg type="polygon"  config={options} /> */}
-        {/* <Hero/> */}
       </div>
      
     </div>
