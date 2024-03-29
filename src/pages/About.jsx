@@ -1,4 +1,7 @@
 import "./Pagestyles/About.css";
+import { RiDownload2Fill } from "react-icons/ri";
+import "../Components/style.css";
+
 
 const About = () => {
   return (
@@ -22,9 +25,17 @@ const About = () => {
         getting geeky with Node, and working with databases.
       </div>
       <div>
-        <div style={{ fontSize: "1.4rem" ,}}>Tech Stack</div>
+        <div
+          style={{
+            fontSize: "1.4rem",
+            color: "var(--main-color)",
+            fontWeight: "bold",
+          }}
+        >
+          Tech Stack
+        </div>
         <div>
-          <div>FrontEnd</div>
+          <div style={{ fontWeight: "bold" }}>FrontEnd</div>
           <div className="imgStyle">
             <img src="html.png" alt="" />
             <img src="css.png" alt="" />
@@ -38,7 +49,7 @@ const About = () => {
             <img src="rtk.svg" alt="" />
             <img src="mui.png" alt="" />
           </div>
-          <div>
+          <div style={{ fontWeight: "bold" }}>
             BackEnd
             <div className="imgStyle">
               {" "}
@@ -46,26 +57,24 @@ const About = () => {
               <img src="express.png" alt="" />
               <img src="mongodb.png" alt="" />
               <img src="mysql.png" alt="" />
-              <img src="PostgreSQL.png" alt="" />
+              <img src="plsq.svg" alt="" />
               <img src="supabase.svg" alt="" />
-              <img src="firebase.png" alt="" />{" "}
-              <img src="rest.png" alt="" />{" "}
+              <img src="firebase.png" alt="" /> <img src="rest.png" alt="" />{" "}
               <img src="vercel.svg" alt="" />{" "}
             </div>
           </div>
 
           <div>
-            <div>Others</div>
+            <div style={{ fontWeight: "bold" }}>Others</div>
             <div className="imgStyle">
               <img src="git.png" alt="" /> <img src="github.png" alt="" />{" "}
               <img src="lc2.png" alt="" style={{ width: "6rem" }} />
               <img src="webdriverio.png" alt="" />{" "}
-              <img src="postman.png" alt="" />{" "}
-              <img src="figma.png" alt="" />{" "}
+              <img src="postman.png" alt="" /> <img src="figma.png" alt="" />{" "}
             </div>
           </div>
           <div className="imgStyle">
-            <div>Analysis</div>
+            <div style={{ fontWeight: "bold" }}>Analysis</div>
             <div>
               {" "}
               <img src="excel.png" alt="" /> <img src="powerbi.svg" alt="" />{" "}
@@ -79,20 +88,38 @@ const About = () => {
         I have a history of delivering outstanding results ahead of schedule.
         all the while paying close attention to well-structured code, design,
         accessibility, and performance. In addition to giving demos, I like to
-        write articles, watch animes, play games, and instruct at training facilities.
+        write articles, watch animes, play games, and instruct at training
+        facilities.
       </div>
 
+
+
+      <div
+        style={{ display: "flex", justifyContent: "center", fontSize: "4rem" }}
+      >
+        <div className="buttonStyle custom">
+          <a href="qr.png" download style={{ color: "white" }}>
+            Resume{" "}
+            <span style={{ marginLeft: ".2rem" }}>
+              <RiDownload2Fill />
+            </span>
+          </a>
+        </div>
+      </div>
+     
       <div
         style={{ marginTop: ".5rem", fontSize: "1.2rem", fontWeight: "bold" }}
       >
-        Reach out and say "Hey!". I look forward to hearing from you!
+        Scan, Reach out and say "Hey!". I look forward to hearing from you!
       </div>
-      <div
-        style={{ marginTop: ".5rem", fontSize: "1.rem", fontWeight: "bold" }}
-      >
+      <div>
+        <img src="qr.png" alt="" style={{ height: "8rem" }} />
+      </div>
+      <div style={{ fontSize: "1.rem", fontWeight: "bold" }}>
         {" "}
         Stay Connected
       </div>
+   
       {/* <div > <img src="sign.svg" alt="" style={{height:"20rem"}} /></div> */}
     </div>
   );

@@ -21,7 +21,9 @@ const Footer = () => {
         alignItems: "center",
         justifyContent: "center",
         fontSize: "1.5rem",
-        marginTop:"2rem"
+        marginTop:"3rem",
+        // backgroundColor:"red",
+        paddingTop:"1rem"
       }}
     >
       <div style={{ display: "flex", gap: ".4rem", padding: "0 2rem" }}>

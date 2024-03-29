@@ -1,6 +1,7 @@
 import { FaLinkedinIn } from "react-icons/fa";
 
 import Header2 from "./Header2";
+import "../Components/style.css";
 
 const Profile = () => {
   return (
@@ -22,25 +23,13 @@ const Profile = () => {
           }}
         >
           <button
-            style={{
-              //   width: "6rem",
-              // padding: ".8rem 1rem",
-              // borderRadius: "2rem",
-              backgroundColor: "var(--main-color)",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-              fontSize: "1rem",
-              fontWeight: "bold",
-            }}
+            className="buttonStyle"
             onClick={() => (
               window.open("https://www.linkedin.com/in/sarkar-apurba"), "_blank"
             )}
           >
-            <div
-              style={{ display: "flex", alignItems: "center", gap: ".5rem" }}
-            >
-              <div style={{ marginTop: "2px" }}>Follow</div>
+            <div className="follow">
+              <div style={{ color: "white" }}>Follow</div>
 
               <FaLinkedinIn />
             </div>

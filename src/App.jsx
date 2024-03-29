@@ -1,4 +1,3 @@
-
 import Nav from "./Components/Nav";
 import Primary from "./Components/Primary";
 import Footer from "./Components/Footer";
@@ -17,10 +16,8 @@ const App = () => {
   return (
     <div>
       <Primary />
-      <div
-       className="wrapper"
-      >
-        <Banner />
+      <Banner />
+      <div className="wrapper">
         {/* <Feed/> */}
         <Profile />
         <Nav />

@@ -9,6 +9,16 @@
 }
 
 
+.follow{
+/* margin-top: "5rem"; */
+/* font-size: "4rem"; */
+display: flex;
+ align-items: center;
+ gap: .5rem;
+ padding:.5rem .8rem;
+ /* border-radius: 2rem; */
+ border-radius: 2rem;
+}
 /* colors:  */
 /* ##C822FF */
 /* #1A6DFF */

@@ -2,6 +2,7 @@ a {
   /* padding: .5rem 1.5rem; */
   text-decoration: none;
   font-weight: bold;
+  padding: .4rem 1rem;
 }
 
 a:hover {
@@ -14,3 +15,16 @@ a:active {
   border-bottom: .2rem solid #cc0088;
 }
 
+.wrapper{
+  /* background-color; */
+  padding: 0 1.5rem;
+}
+.qc {
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.img img{
+  height: 2rem;
+}
