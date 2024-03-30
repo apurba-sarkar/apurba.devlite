@@ -1,7 +1,8 @@
 import "./Pagestyles/About.css";
 import { RiDownload2Fill } from "react-icons/ri";
 import "../Components/style.css";
-
+import Qc from "../Components/Qc";
+import Hero from "../Components/Hero";
 
 const About = () => {
   return (
@@ -13,6 +14,8 @@ const About = () => {
         coding, which gives you the courage to construct anything. I like
         talking about this and telling individuals how to improve their talents.
       </div>
+
+      <Hero/>
       <div style={{ marginTop: ".5rem" }}>
         I've had the honor of working for and with organizations like{" "}
         <span style={{ color: "var(--main-color)" }}>
@@ -24,6 +27,7 @@ const About = () => {
         comes to coding, I like playing around with React, creating CSS with
         getting geeky with Node, and working with databases.
       </div>
+
       <div>
         <div
           style={{
@@ -92,7 +96,7 @@ const About = () => {
         facilities.
       </div>
 
-
+      <Qc />
 
       <div
         style={{ display: "flex", justifyContent: "center", fontSize: "4rem" }}
@@ -106,7 +110,7 @@ const About = () => {
           </a>
         </div>
       </div>
-     
+
       <div
         style={{ marginTop: ".5rem", fontSize: "1.2rem", fontWeight: "bold" }}
       >
@@ -119,7 +123,7 @@ const About = () => {
         {" "}
         Stay Connected
       </div>
-   
+
       {/* <div > <img src="sign.svg" alt="" style={{height:"20rem"}} /></div> */}
     </div>
   );

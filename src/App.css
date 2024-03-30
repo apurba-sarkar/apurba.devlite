@@ -19,11 +19,11 @@ a:active {
   /* background-color; */
   padding: 0 1.5rem;
 }
-.qc {
+/* .qc {
   
   display: flex;
   flex-direction: column;
-}
+} */
 
 .img img{
   height: 2rem;

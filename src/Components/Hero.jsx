@@ -2,14 +2,18 @@ import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   return (
-    <div style={{color:"white"}}>
-      <div>APURBA</div>
-      <div> I am a</div>
-
-      <div style={{color:"blue"}}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        color:" var(--main-color);"
+      }}
+    >
+      <div style={{ fontSize:"4rem",color:" var(--main-color)",fontWeight:"bold"}}>
         <Typewriter
           options={{
-            strings: ["Hello", "World"],
+            strings: ["DEVELOPER", "UI/UX", "ANALYST", "TECH TRAINER"],
             autoStart: true,
             loop: true,
           }}
