@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 const Primary = () => {
-  const [mode, setMode] = useState(false);
+  const [mode, setMode] = useState(125);
 
   return (
     <div
@@ -11,7 +11,7 @@ const Primary = () => {
         justifyContent: "space-between",
         padding: ".2rem 2rem",
         alignItems: "center",
-        // height: "2.5rem",
+    
       }}
     >
       <div>
@@ -59,7 +59,7 @@ const Primary = () => {
           />
         </svg>
       </div>
-      <button onClick={()=>setMode(!mode)}>{ mode ?"Light":"Dark" }</button>
+      <div>{mode}</div>
     </div>
   );
 };

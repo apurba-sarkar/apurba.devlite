@@ -7,9 +7,11 @@ a {
 
 a:hover {
   background-color: rgb(197, 190, 190);
+  color: #cc0088;
 }
-a:active {
-}
+/* a:visited {
+  color:#000000;
+} */
 
 .active {
   border-bottom: .2rem solid #cc0088;
@@ -19,11 +21,6 @@ a:active {
   /* background-color; */
   padding: 0 1.5rem;
 }
-/* .qc {
-  
-  display: flex;
-  flex-direction: column;
-} */
 
 .img img{
   height: 2rem;

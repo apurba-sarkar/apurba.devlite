@@ -10,22 +10,24 @@ const About = () => {
       <div style={{ fontSize: "3rem", fontWeight: "bold" }}>Kon'nichiwa 👋</div>
       <div>
         I am <span style={{ color: "var(--main-color)" }}> Apurba Sarkar </span>
-        . I enjoys bringing ideas to life through code ! I support for creative
-        coding, which gives you the courage to construct anything. I like
-        talking about this and telling individuals how to improve their talents.
+        . I enjoys bringing ideas to life through coding. I support creative
+        coding, that gives you the courage to create anything. I like discussing
+        about developement and guiding individuals about how to improve their
+        skills.
       </div>
 
-      <Hero/>
+      <Hero />
       <div style={{ marginTop: ".5rem" }}>
-        I've had the honor of working for and with organizations like{" "}
+        I've had the honor of working with organizations like{" "}
         <span style={{ color: "var(--main-color)" }}>
           Qurinom Solutions, Teacheif Academy, Endosoft, and Wrkmen Tech Serv
-          Solutions{" "}
+          Solutions.
         </span>{" "}
-        . I currently work remotely as a developer on the web and mobile
-        platforms. I do a lot of demos as well. I'm talking about a lot. When it
-        comes to coding, I like playing around with React, creating CSS with
-        getting geeky with Node, and working with databases.
+        I am currently working remotely as a developer on the web and mobile
+        platforms. I do a lot of demos as well. I talk alot when it comes to
+        coding. I like to explore with React, creating CSS with getting geeky
+        with Node, and working with databases and analysis with BI and Excel. I also take deep dive as
+        professional trainner.
       </div>
 
       <div>
@@ -34,6 +36,7 @@ const About = () => {
             fontSize: "1.4rem",
             color: "var(--main-color)",
             fontWeight: "bold",
+            marginTop:"1.2rem"
           }}
         >
           Tech Stack
@@ -121,7 +124,7 @@ const About = () => {
       </div>
       <div style={{ fontSize: "1.rem", fontWeight: "bold" }}>
         {" "}
-        Stay Connected
+        Stay Connected !
       </div>
 
       {/* <div > <img src="sign.svg" alt="" style={{height:"20rem"}} /></div> */}

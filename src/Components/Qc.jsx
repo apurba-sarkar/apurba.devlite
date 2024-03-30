@@ -1,7 +1,7 @@
 import "./style.css";
 const Qc = () => {
   return (
-    <div style={{ marginBottom: ".85rem" }}>
+    <div style={{ marginBottom: ".85rem",marginTop:'1rem' }}>
       <div
         style={{
           color: "var(--main-color",
@@ -16,7 +16,7 @@ const Qc = () => {
           {" "}
           <img src="jnu.png" style={{ height: "3.5rem" }} alt="" />{" "}
         </div>
-        <div>
+        <div className="data">
           <div>MCA from</div>
           <div>Jaipur National University</div>
         </div>
@@ -26,7 +26,7 @@ const Qc = () => {
           {" "}
           <img src="google.png" alt="" style={{ height: "3.5rem" }} />{" "}
         </div>
-        <div>
+        <div className="data">
           <div>Data Analytics from</div>
           <div>Google</div>
         </div>

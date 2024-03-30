@@ -2,7 +2,7 @@ import { LuBadgeCheck } from "react-icons/lu";
 import { RiHomeOfficeFill } from "react-icons/ri";
 import { FaBirthdayCake } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
-import { FaLink } from "react-icons/fa";
+import { AiFillExperiment } from "react-icons/ai";
 import "./style.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -47,16 +47,19 @@ const Header2 = () => {
             gap: "1rem",
             paddingTop: "1rem",
             color: "var(--secondary-color)",
-            flexWrap:"wrap"
+            flexWrap:"wrap",
+            alignItems:"center",
+            justifyContent:"center",
+          //  lineHeight :"1rem"
           }}
         >
           <div className="small">
             <RiHomeOfficeFill />
-            <div>Available</div>
+            <div>Remote</div>
           </div>
 
           <div className="small">
-            <FaLink />
+          <AiFillExperiment />
             <div>Links</div>
           </div>
           <div className="small">
