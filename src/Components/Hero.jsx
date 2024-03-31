@@ -13,7 +13,8 @@ const Hero = () => {
       <div style={{ fontSize:"4rem",color:" var(--main-color)",fontWeight:"bold"}}>
         <Typewriter
           options={{
-            strings: ["DEVELOPER", "UI/UX DESIGNER", "ANALYST", "IT TRAINER"],
+            strings: ["DEVELOPER", "UI/UX DESIGNER", "ANALYST",
+            "TECHNICAL WRITER", "IT TRAINER"],
             autoStart: true,
             loop: true,
           }}

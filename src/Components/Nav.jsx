@@ -14,7 +14,7 @@ const Nav = () => {
     >
       <NavLink to="/feed">Feed</NavLink>
       <NavLink to="/about">About </NavLink>
-      <NavLink to="/content">Content</NavLink>
+      {/* <NavLink to="/content">Content</NavLink> */}
       <NavLink to="/contact">Contact</NavLink>
       <NavLink to="/guestbook">Guestbook</NavLink>
     </nav>
