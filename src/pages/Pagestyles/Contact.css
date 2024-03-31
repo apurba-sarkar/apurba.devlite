@@ -1,7 +1,9 @@
-.contact{
-    display: flex;
-/* flex-direction: ; */
-align-items: center;
-gap:2rem
-/* justify-content: center; */
+.contact {
+  display: flex;
+  /* flex-direction: ; */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  /* justify-content: center; */
 }

@@ -79,6 +79,6 @@ html {
 }
 
 ::selection {
-  background-color: #e04aae; /* Change this to the desired color */
-  color: #fff; /* Change this to the desired text color */
+  background-color: #e04aae;
+  color: #fff; 
 }

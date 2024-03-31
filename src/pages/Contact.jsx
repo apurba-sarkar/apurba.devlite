@@ -1,15 +1,16 @@
-import "./Pagestyles/Contact.css"
+import { Mail } from "../Components/helpers/Mail";
+import "./Pagestyles/Contact.css";
 
 const Contact = () => {
   return (
     <div>
+      <Mail />
       <div className="contact">
-        <img src="loca.png" alt="" height="150rem" />
-        <div>Kolkata</div>
+        {/* <div>Location</div> */}
+        <img src="kolkata.png" alt="" height="200rem" />
       </div>
       <div className="contact">
-        <img src="email.png" alt="" height="150rem" />
-        <div>Kolkata</div>
+        {/* <img src="email.png" alt="" height="150rem" /> */}
       </div>
     </div>
   );

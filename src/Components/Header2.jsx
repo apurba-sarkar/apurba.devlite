@@ -7,7 +7,6 @@ import "./style.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 const Header2 = () => {
   const toster = () => toast("request submitted");
 
@@ -47,10 +46,10 @@ const Header2 = () => {
             gap: "1rem",
             paddingTop: "1rem",
             color: "var(--secondary-color)",
-            flexWrap:"wrap",
-            alignItems:"center",
-            justifyContent:"center",
-          //  lineHeight :"1rem"
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "center",
+            //  lineHeight :"1rem"
           }}
         >
           <div className="small">
@@ -59,7 +58,7 @@ const Header2 = () => {
           </div>
 
           <div className="small">
-          <AiFillExperiment />
+            <AiFillExperiment />
             <div>Links</div>
           </div>
           <div className="small">
@@ -79,7 +78,7 @@ const Header2 = () => {
             alignItems: "center",
           }}
         >
-          <div style={{ marginTop: "1rem",marginBottom:".3rem" }}>
+          <div style={{ marginTop: "1rem", marginBottom: ".3rem" }}>
             Keep up to date with my latest projects and Technologies
           </div>
           <div
@@ -87,7 +86,6 @@ const Header2 = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-
             }}
           >
             <div>
