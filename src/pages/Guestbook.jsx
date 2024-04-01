@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "../Components/helpers/Mail.css";
+import { useForm } from "react-hook-form";
 const Guestbook = () => {
   const [isActive, setIsActive] = useState(false);
+
   return (
     <div>
       <div style={{ fontSize: "3rem", fontWeight: "bold" }}>Response Time </div>
@@ -11,12 +13,18 @@ const Guestbook = () => {
         your experience, and it will be added below of this Guestbook page.
       </div>
       <div className="gb">
-        <div >
+        <div>
           {isActive ? (
             <Collapsed setIsActive={setIsActive} />
           ) : (
-            <button className=".sbutton
-             collapsed" onClick={() => setIsActive(!isActive)}> Feedback</button>
+            <button
+              className=".sbutton
+             collapsed"
+              onClick={() => setIsActive(!isActive)}
+            >
+              {" "}
+              Feedback
+            </button>
           )}
         </div>
       </div>
@@ -27,15 +35,35 @@ const Guestbook = () => {
 export default Guestbook;
 
 const Collapsed = ({ setIsActive }) => {
+  const { register, handleSubmit } = useForm();
+
+  function onSubmit(data) {
+    console.log(data);
+  }
+
   return (
-    <div style={{ display: "flex", flexDirection: "column" , width:"20rem"}}>
+    <form
+      style={{ display: "flex", flexDirection: "column", width: "20rem" }}
+      onSubmit={handleSubmit(onSubmit)}
+    >
       {/* <button>Guestbook</button> */}
       <label for="name">Name</label>
-      <input type="text" id="name" className="message" />
+      <input
+        type="text"
+        id="name"
+        className="message"
+        defaultValue=""
+        {...register("name")}
+      />
       <label for="comment">Comment</label>
-      <textarea name="" rows="8"
-       className="message"
-       id="comment"></textarea>
+      <textarea
+        name=""
+        rows="8"
+        className="message"
+        id="comment"
+        {...register("comment")}
+        defaultValue=""
+      ></textarea>
       <div>
         <button className="cbutton" onClick={() => setIsActive(false)}>
           x
@@ -44,6 +72,6 @@ const Collapsed = ({ setIsActive }) => {
           Comment
         </button>
       </div>
-    </div>
+    </form>
   );
 };

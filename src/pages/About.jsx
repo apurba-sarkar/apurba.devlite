@@ -26,8 +26,8 @@ const About = () => {
         I am currently working remotely as a developer on the web and mobile
         platforms. I do a lot of demos as well. I talk alot when it comes to
         coding. I like to explore with React, creating CSS with getting geeky
-        with Node, and working with databases and analysis with BI and Excel. I also take deep dive as
-        professional trainner.
+        with Node, and working with databases and analysis with BI and Excel. I
+        also take deep dive as professional trainner.
       </div>
 
       <div>
@@ -36,7 +36,7 @@ const About = () => {
             fontSize: "1.4rem",
             color: "var(--main-color)",
             fontWeight: "bold",
-            marginTop:"1.2rem"
+            marginTop: "1.2rem",
           }}
         >
           Tech Stack
@@ -105,11 +105,8 @@ const About = () => {
         style={{ display: "flex", justifyContent: "center", fontSize: "4rem" }}
       >
         <div className="buttonStyle custom">
-          <a href="qr.png" download style={{ color: "white" }}>
-            Resume{" "}
-            <span style={{ marginLeft: ".2rem" }}>
-              <RiDownload2Fill />
-            </span>
+          <a href="qr.png" download className="download" style={{ color: "white" }}>
+            <span style={{fontSize:".9rem"}}>Resume </span> <RiDownload2Fill size={18} />
           </a>
         </div>
       </div>

@@ -1,13 +1,22 @@
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import "./Mail.css";
+import { useForm } from "react-hook-form";
+
 
 export const Mail = () => {
+
+  // const [showForm,setShowForm] =useState(false)
+  // const {register, handleSubmit}  = useForm()
   const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    if (form.current != "") {
+      e.preventDefault();
+      form.current.reset();
+      console.log(form.current)
+    }
 
     emailjs
       .sendForm("service_6ph4o1i", "template_1tb8ale", form.current, {
@@ -40,7 +49,7 @@ export const Mail = () => {
       </div>
       <form ref={form} onSubmit={sendEmail} className="form">
         <label for="name">Name</label>
-        <input type="text" name="user_name" id="name"/>
+        <input type="text" name="user_name" id="name" />
         <label for="email">Email</label>
         <input type="email" name="user_email" id="email" />
         <label for="msg">Message</label>
