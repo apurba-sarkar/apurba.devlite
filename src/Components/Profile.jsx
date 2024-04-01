@@ -15,7 +15,7 @@ const Profile = () => {
         }}
       >
         <div>
-          <img src="main.jpg" alt="" className="image" />
+          <img src="main3.jpg" alt="" className="image" />
         </div>
         <div
           style={{
