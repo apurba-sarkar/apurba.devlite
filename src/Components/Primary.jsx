@@ -11,6 +11,7 @@ const Primary = () => {
         justifyContent: "space-between",
         padding: ".2rem 2rem",
         alignItems: "center",
+        position: "sticky"
     
       }}
     >

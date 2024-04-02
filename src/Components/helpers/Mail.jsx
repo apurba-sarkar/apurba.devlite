@@ -4,18 +4,16 @@ import toast, { Toaster } from "react-hot-toast";
 import "./Mail.css";
 import { useForm } from "react-hook-form";
 
-
 export const Mail = () => {
-
   // const [showForm,setShowForm] =useState(false)
-  // const {register, handleSubmit}  = useForm()
+
   const form = useRef();
 
   const sendEmail = (e) => {
     if (form.current != "") {
       e.preventDefault();
       form.current.reset();
-      console.log(form.current)
+      console.log(form.current);
     }
 
     emailjs
@@ -37,15 +35,15 @@ export const Mail = () => {
     <div className="main-form">
       <div style={{ fontSize: "3rem", fontWeight: "bold" }}>Ping me 🔔 </div>
       <div style={{ textAlign: "justify", marginBottom: "2rem" }}>
-        "Are you ready to take your project to new heights? I invite you to
-        consider working with me as your project maker. With a deep commitment
-        to quality and a penchant for problem-solving, I'm eager to bring your
-        vision to life. I'm dedicated to delivering solutions that exceed
-        expectations. Let's embark on this journey together, where your ideas
-        meet my expertise. Your satisfaction is my priority, and I'm confident
+        "Are you ready to take your project to the new heights? I invite you to
+        join the hands with me as your project creator. With a deep commitment
+        to the quality and a penchant for problem-solving, I'm eager to bring
+        your vision into life. I'm dedicated to delivering solutions that exceed
+        the expectations. Let's embark on this journey together, where your
+        ideas meet my expertise. Your satisfaction is my priority. I'm confident
         that together, we can achieve remarkable results. I cordially invite you
-        to give me the opportunity to demonstrate what I can do for you. Please
-        fill your details below.
+        to give me the opportunity to demonstrate what I can achieve for you.
+        Please fill your details below.
       </div>
       <form ref={form} onSubmit={sendEmail} className="form">
         <label for="name">Name</label>
