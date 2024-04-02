@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../Components/helpers/Mail.css";
 import { useForm } from "react-hook-form";
+import AllPost from "../Components/helpers/GuestPost";
 const Guestbook = () => {
   const [isActive, setIsActive] = useState(false);
 
@@ -23,11 +24,13 @@ const Guestbook = () => {
               onClick={() => setIsActive(!isActive)}
             >
               {" "}
-              Feedback
+              Click here for Feedback
             </button>
           )}
         </div>
+      
       </div>
+       <AllPost/>
     </div>
   );
 };

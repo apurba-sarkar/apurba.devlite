@@ -11,10 +11,30 @@ import Projects from "./pages/Projects";
 import Guestbook from "./pages/Guestbook";
 import Profile from "./Components/Profile";
 import Banner from "./Components/Banner";
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 60 * 1000,
+    },
+  },
+});
+
+
+
 
 const App = () => {
   return (
     <div>
+      <QueryClientProvider client={queryClient}>
       <Primary />
       <Banner />
       <div className="wrapper">
@@ -35,6 +55,8 @@ const App = () => {
 
       {/* <ParticlesBg type="" bg={true} /> */}
       {/* <ParticlesBg type="fountain" bg={true} /> */}
+      <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
     </div>
   );
 };
