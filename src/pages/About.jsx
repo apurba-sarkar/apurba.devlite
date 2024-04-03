@@ -105,8 +105,14 @@ const About = () => {
         style={{ display: "flex", justifyContent: "center", fontSize: "4rem" }}
       >
         <div className="buttonStyle custom">
-          <a href="as.pdf" download className="download" style={{ color: "white" }}>
-            <span style={{fontSize:".9rem"}}>Resume </span> <RiDownload2Fill size={18} />
+          <a
+            href="as.pdf"
+            download
+            className="download"
+            style={{ color: "white", backgroundColor: "transparent" }}
+          >
+            <span style={{ fontSize: ".9rem" }} >Resume </span>{" "}
+            <RiDownload2Fill size={18} className="resume" />
           </a>
         </div>
       </div>

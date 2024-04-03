@@ -67,7 +67,7 @@ const Header2 = () => {
           </div>
           <div className="small">
             <FaCalendarAlt />
-            <div>Created March 25th</div>
+            <div>Created on March 25th, 2024</div>
           </div>
         </div>
         <div
@@ -95,7 +95,9 @@ const Header2 = () => {
                 placeholder="enter your email"
               />
             </div>
-            <button className="sendbutton" onClick={toster}>
+            <button className="sendbutton"
+            
+            onClick={toster}>
               Send
             </button>
             <ToastContainer />

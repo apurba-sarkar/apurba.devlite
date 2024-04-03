@@ -51,7 +51,7 @@ export const Mail = () => {
         <label for="email">Email</label>
         <input type="email" name="user_email" id="email" />
         <label for="msg">Message</label>
-        <textarea name="message" className="message" rows="8" id="msg" />
+        <textarea style={{resize:"none"}} name="message" className="message" rows="8" id="msg" />
         <button type="submit" onClick={sendEmail} className="sbutton">
           Send
         </button>

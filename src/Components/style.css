@@ -83,3 +83,14 @@
   display: flex;
   gap: .5rem
 }
+
+@media(width > 60em){
+  .banner{
+    height: 18rem;
+  }
+}
+@media(width < 60em){
+  .banner{
+    height: 12rem;
+  }
+}

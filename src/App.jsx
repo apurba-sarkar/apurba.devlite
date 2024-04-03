@@ -20,6 +20,7 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import Alert from "./Components/helpers/Alert";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -37,7 +38,7 @@ const App = () => {
         <div className="sticky">
           <Primary />
         </div>
-
+<Alert/>
         <Banner />
         <div className="wrapper">
           {/* <Feed/> */}

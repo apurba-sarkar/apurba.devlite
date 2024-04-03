@@ -19,7 +19,7 @@ const Banner = () => {
   };
   return (
     <div>
-      <div style={{ height: "13rem" }}>
+      <div className="banner">
         <canvas ref={canvasRef} id="canvas3d" />
       </div>
     </div>

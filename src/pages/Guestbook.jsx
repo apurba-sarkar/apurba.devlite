@@ -8,6 +8,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useQueryClient } from "@tanstack/react-query";
 import { postGuestData } from "../services/apidata";
 import { ToastContainer, toast } from 'react-toastify';
+import "./Pagestyles/GuestBook.css"
 
 const Guestbook = () => {
   const [isActive, setIsActive] = useState(false);
@@ -27,7 +28,7 @@ const Guestbook = () => {
           ) : (
             <button
               className=".sbutton
-             collapsed"
+             collapsed border"
               onClick={() => setIsActive(!isActive)}
             >
               {" "}
@@ -81,7 +82,10 @@ const Collapsed = ({ setIsActive }) => {
 
   return (
     <form
-      style={{ display: "flex", flexDirection: "column", width: "20rem" }}
+      style={{ display: "flex", flexDirection: "column", 
+   
+     }}
+     className="guestb"
       onSubmit={handleSubmit(onSubmit, onError)}
     >
       {/* <button>Guestbook</button> */}
@@ -118,6 +122,7 @@ const Collapsed = ({ setIsActive }) => {
           required: "This field is required",
         })}
         defaultValue=""
+        style={{resize:"none"}}
       ></textarea>
         {errors?.name?.message && (
         <div

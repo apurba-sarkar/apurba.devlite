@@ -3,6 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import Header2 from "./Header2";
 import "../Components/style.css";
 
+
 const Profile = () => {
   return (
     <div style={{ marginTop: "-5rem" }}>
@@ -37,6 +38,7 @@ const Profile = () => {
         </div>
       </div>
       <Header2 />
+     
     </div>
   );
 };

@@ -1,0 +1,13 @@
+.guestb{
+    width: 40vw;
+    resize: none;
+    /* background-color: aqua; */
+}
+
+@media(width<60em){
+    .guestb{
+        width: 18rem;
+        resize: none;
+        /* background-color: aqua; */
+    }
+}

@@ -8,13 +8,14 @@
   /* margin-top: 1rem; */
 }
 
-.sbutton, .cbutton {
+.sbutton,
+.cbutton {
   /* background-color: #cc0088; */
   border: none;
   padding-right: 1rem;
   height: 2.65rem;
   margin-top: 0.2rem;
-  border-radius:  5rem ;
+  border-radius: 5rem;
   cursor: pointer;
   color: white;
   padding-left: 1rem;
@@ -42,49 +43,55 @@
   margin-top: 0.2rem;
 }
 
-
-
-input:focus , .message:focus  {
+input:focus,
+.message:focus {
   border: #cc0088 0.1rem solid;
   outline: none;
 }
 
-.message{
+.message {
   /* margin-bottom: 0.8rem; */
   background-color: none;
   border: none;
   padding: 0.3rem 1.5rem;
   background-color: rgba(225, 218, 218, 0.462);
   color: #cc0088;
-  border-radius: 1rem  ;
+  border-radius: 1rem;
   margin-top: 0.2rem;
-  font-family:"Mukta"
+  font-family: "Mukta";
 }
 
-#name{
+#name {
   height: 2rem;
 }
 
-.cbutton{
+.cbutton {
   border: 2px solid #cc0088;
   color: #cc0088;
 }
 
-.gb{
+.gb {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
 }
 
-.collapsed{
+.collapsed {
   background-color: #cc0088;
   color: green;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   height: 2.2rem;
-  width:12rem;
+  width: 12rem;
   color: white;
   border: none;
   /* font-size: 1.1rem; */
   /* height: 2rem; */
+}
 
+.border {
+  /* outline: solid 4px blue; */
+  /* margin: 2rem; */
+  border: 2px solid transparent; /* Add a transparent border */
+  box-shadow: 0 0 0 5px white, 0 0 0 8px var(--main-color);
+  /* outline: 2px solid black; Add an outline */
 }

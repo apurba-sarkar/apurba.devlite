@@ -38,6 +38,7 @@
     "react-scroll-progress-bar": "^1.1.13",
     "react-spinners": "^0.13.8",
     "react-toastify": "^10.0.5",
+    "reactjs-popup": "^2.0.6",
     "supabase": "^1.153.1",
     "typewriter-effect": "^2.21.0"
   },

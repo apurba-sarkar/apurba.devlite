@@ -233,7 +233,7 @@ function GuestPost({ list }) {
                   style={{
                     marginTop: "-.2rem",
                     textAlign: "justify",
-                    lineHeight: "1.1rem",
+                    lineHeight: ".9rem",
                     fontSize: ".8rem",
                   }}
                 >
