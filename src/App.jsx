@@ -35,12 +35,7 @@ const App = () => {
       <ProgressBar bgcolor="#cc0088" duration="1" />
       <QueryClientProvider client={queryClient}>
         <div
-          style={{
-            position: "sticky",
-            top: "0",
-            // backgroundColor: "white",
-            zIndex: "1",
-          }}
+         
           className="sticky"
         >
           <Primary />

@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { useState } from "react";
+import Counter from "./helpers/Counter";
 
 const Primary = () => {
   const [mode, setMode] = useState(125);
@@ -11,7 +12,7 @@ const Primary = () => {
         justifyContent: "space-between",
         padding: ".2rem 2rem",
         alignItems: "center",
-        position: "sticky"
+        
     
       }}
     >
@@ -60,7 +61,7 @@ const Primary = () => {
           />
         </svg>
       </div>
-      <div>{mode}</div>
+      <div><Counter/></div>
     </div>
   );
 };

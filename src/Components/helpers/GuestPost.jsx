@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import { BarLoader } from "react-spinners";
 import { FaReplyd } from "react-icons/fa";
 import { BsReplyAllFill } from "react-icons/bs";
-import { ToastContainer, toast } from 'react-toastify';
+
 
 function AllPost() {
   const {
@@ -33,7 +33,7 @@ function AllPost() {
         <BarLoader color="#cc0088" />
       </div>
     );
-  console.log(list);
+  // console.log(list);
   //  if(list){
   //   const pinnedList= list.filter(comment=>comment.pinned == true)
   //   console.log("---" ,pinnedList)

@@ -10,13 +10,43 @@ export async function getGuestData() {
 }
 
 export async function postGuestData(newData) {
+  const { data, error } = await supabase.from("guestpost").insert([newData]);
+
+  if (error) {
+    console.error(error.message);
+    throw new Error("comment could not be posted");
+  }
+  return data;
+}
+
+//visiters
+
+export async function getVisiters() {
+  let { data, error } = await supabase.from("visit").select("visit");
+
+  if (error) {
+    console.error(error.message);
+    throw new Error("comment could not be loaded");
+  }
+  return data;
+}
+
+export async function postVisiters(newData) {
+  console.log("from other");
+  console.log(newData);
+  const randomNumber = Math.floor(Math.random() * 4) + 1;
+  const incVisit = newData + randomNumber;
+
+  console.log(incVisit);
   const { data, error } = await supabase
-    .from("guestpost")
-    .insert([newData])
-    
-    if (error) {
-        console.error(error.message);
-        throw new Error("comment could not be posted");
-      }
-      return data;
+    .from("visit")
+    .update({ visit: incVisit })
+    .eq("id", 1)
+    .select();
+
+  if (error) {
+    console.error(error.message);
+    throw new Error("comment could not be loaded");
+  }
+  return data;
 }
