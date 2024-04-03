@@ -35,9 +35,18 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: sticky;
   top: 0;
-
   z-index: 1;
   /* background-repeat: no-repeat, repeat;
   background-image: url("pat.jpg");
   background-blend-mode:lighten */
+}
+
+@media (width > 60rem ){
+  html{
+    font-size: 120%;
+  }
+.respo{
+  padding: 0 26rem;
+}
+
 }

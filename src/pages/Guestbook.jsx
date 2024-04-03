@@ -52,23 +52,24 @@ const Collapsed = ({ setIsActive }) => {
 
   function onSubmit(data) {
     mutate(data);
-    // console.log(data);
+    console.log(data);
     reset();
   }
 
   const { mutate, isLoading } = useMutation({
     mutationFn: postGuestData,
     onSuccess: () => {
-      console.log("new note added succesfully!");
+      // console.log("new note added succesfully!");
       toast.success("Comment added Successfully!")
       // toast.success("new note added succesfully!");
       queryClient.invalidateQueries({
         queryKey: ["guestData"],
       });
+      setIsActive(false)
     },
 
     onError: (err) => {
-      // toast.error(err.message);
+      toast.error(err.message);
       // console.log(err);
     },
     // if (isLoading) return <PropagateLoader/>;

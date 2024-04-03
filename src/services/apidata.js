@@ -32,12 +32,14 @@ export async function getVisiters() {
 }
 
 export async function postVisiters(newData) {
-  console.log("from other");
-  console.log(newData);
+  // console.log("from other");
+  // console.log(newData);
   const randomNumber = Math.floor(Math.random() * 4) + 1;
   const incVisit = newData + randomNumber;
 
-  console.log(incVisit);
+  // console.log(incVisit);
+
+  
   const { data, error } = await supabase
     .from("visit")
     .update({ visit: incVisit })

@@ -31,13 +31,10 @@ const queryClient = new QueryClient({
 
 const App = () => {
   return (
-    <div>
+    <div className="respo">
       <ProgressBar bgcolor="#cc0088" duration="1" />
       <QueryClientProvider client={queryClient}>
-        <div
-         
-          className="sticky"
-        >
+        <div className="sticky">
           <Primary />
         </div>
 

@@ -12,16 +12,18 @@ const Primary = () => {
         justifyContent: "space-between",
         padding: ".2rem 2rem",
         alignItems: "center",
+       
         
     
       }}
     >
-      <div>
+      <div style={{}}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 64 64"
           width="2.5rem"
-          height="3rem"
+      
+          style={{marginTop:".5rem"}}
         >
           <linearGradient
             id="XtP4BkwNXDck6u-FOmT5ha"

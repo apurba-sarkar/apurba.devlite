@@ -58,7 +58,7 @@ input:focus , .message:focus  {
   color: #cc0088;
   border-radius: 1rem  ;
   margin-top: 0.2rem;
-  
+  font-family:"Mukta"
 }
 
 #name{

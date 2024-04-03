@@ -19,13 +19,13 @@ const Counter = () => {
   //   console.log(visiters);
 
   const vNumber = visiters?.[0]?.visit;
-  console.log(vNumber);
+//   console.log(vNumber);
 
   useEffect(() => {
     if (vNumber !== undefined) {
       postVisiters(vNumber);
       // console.log("pick")
-      console.log(vNumber);
+    //   console.log(vNumber);
     }
   }, [vNumber]);
 

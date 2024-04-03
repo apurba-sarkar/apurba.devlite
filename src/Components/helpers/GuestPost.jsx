@@ -41,7 +41,16 @@ function AllPost() {
   //  }
 
   //
+// console.log(list)
 
+const filterPinned = list.filter(num=>num.pinned == true)
+// console.log(filterPinned)
+
+const unPinned = list.filter(num=>num.pinned == false)
+// console.log(unPinned)
+
+const filteredList = [...filterPinned,...unPinned] 
+// console.log(filteredList)
   return (
     <div style={{ marginTop: "1.5rem", }}>
       <div
@@ -61,7 +70,7 @@ function AllPost() {
           gap: "1rem",
         }}
       >
-        {list && list.map((list) => <GuestPost list={list} key={list.id} />)}
+        {filteredList && filteredList.map((list) => <GuestPost list={list} key={list.id} />)}
         {/* <GuestPost/> */}
       </div>
     </div>
@@ -77,6 +86,10 @@ function GuestPost({ list }) {
 
     return `${year}-${month}-${day}`;
   }
+
+  const images = ['anaya.jpg', 'bunny.jpeg', 'asuna.jpeg', 'chizu.jpeg','asuna.jpeg','aqua.png','miku.png','saku.png','siesta.png'];
+  const randomIndex = Math.floor(Math.random() * images.length);
+  const randomImage = images[randomIndex];
   return (
     <div>
       <div
@@ -92,7 +105,7 @@ function GuestPost({ list }) {
       >
         <div style={{ display: "flex", alignItems: "center" }}>
           <img
-            src="anaya.jpg"
+            src={randomImage}
             alt=""
             style={{
               height: "3.5rem",
@@ -171,7 +184,7 @@ function GuestPost({ list }) {
         <div style={{ marginLeft: "3.5rem", marginTop: ".5rem" }}>
           <div style={{ display: "flex", gap: ".4rem", fontSize: "1.3rem" }}>
             <BsReplyAllFill color="#cc0088" />
-            <div style={{}}>
+            <div style={{display:"flex"}}>
               <img
                 src="main3.jpg"
                 alt=""
