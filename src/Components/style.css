@@ -94,3 +94,7 @@
     height: 12rem;
   }
 }
+
+nav a{
+  color: var(--secondary-color);
+}
