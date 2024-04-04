@@ -185,12 +185,6 @@ nav a {
 
 @media (width>60em) {
   .feedbox {
-    /* width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     */
-    padding: 0 8rem;
   }
 }
 
@@ -217,9 +211,9 @@ nav a {
   margin-top: -0.5rem;
   /* line-height: -0.5rem;
    */
-   /* color: #cc0088; */
+  /* color: #cc0088; */
   line-height: 1.2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .lnk {
@@ -247,22 +241,11 @@ nav a {
   color: var(--main-color);
 }
 
-.img{
-  background-color: aqua  ;
+.img {
+  background-color: aqua;
   height: 12rem;
   width: 100%;
   position: relative;
   /* z-index: 2; */
   /* overflow: hidden; */
-}
-
-@media (width>60em) {
-  .mainbox {
-    /* width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     */
-    /* padding: 0 20rem; */
-  }
 }

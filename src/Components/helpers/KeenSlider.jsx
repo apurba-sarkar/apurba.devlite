@@ -11,17 +11,17 @@ const KeenSlider = ({image1,image2,image3}) => {
       <img
         src={image1}
         className="keen-slider__slide"
-        style={{ height: "15rem" }}
+        style={{ height: "15rem" ,objectFit:"cover"}}
       />
       <img
         src={image2}
         className="keen-slider__slide"
-        style={{ height: "15rem" }}
+        style={{ height: "15rem" ,objectFit:"cover"}}
       />
       <img
         src={image3}
         className="keen-slider__slide"
-        style={{ height: "15rem" }}
+        style={{ height: "15rem" ,objectFit:"cover"}}
       />
     </AutoScrollSlider>
     // </div>

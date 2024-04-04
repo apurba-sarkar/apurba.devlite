@@ -21,6 +21,7 @@ import {
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Alert from "./Components/helpers/Alert";
+import Home from "./pages/Home";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -41,10 +42,10 @@ const App = () => {
         <Alert />
         <Banner />
         <div className="wrapper">
-          {/* <Feed/> */}
           <Profile />
           <Nav />
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route exact path="/feed" element={<Feed />} />
             <Route exact path="/content" element={<Content />} />

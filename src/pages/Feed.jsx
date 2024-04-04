@@ -31,7 +31,7 @@ const Feed = () => {
     );
 
   return (
-    <div>
+    <div className="feeds">
       <FeedBox />
 
       <div className="resFeed">

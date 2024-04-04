@@ -19,7 +19,7 @@ const Primary = () => {
     >
       <div style={{}}>
         <button style={{backgroundColor:"transparent",border:"none",cursor:"pointer"}}
-        onClick={()=>navigate("/feed")}
+        onClick={()=>navigate("/")}
         >
 
    

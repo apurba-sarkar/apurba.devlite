@@ -1,19 +1,23 @@
-.main-feed{
-    background-color: rebeccapurple;
-    /* width: 2rem; */
+/* .main-feed {
+  background-color: rebeccapurple;
+
+} */
+
+/* @media (width>60em) {
+  .resFeed {
+
+  }
+
+} */
+/* @media (width>65em) {
+  .respo {
+  }
+} */
+@media (width>85em) {
+
+  .feeds{
+    padding: 0 10rem;
+  }
 }
 
-@media (width>60em) {
-    .resFeed{
-        padding: 0 8rem;
-    }
 
-      /* width: 60%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-       */
-      /* padding: 0 20rem; */
-    
-  }
-  
