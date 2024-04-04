@@ -9,7 +9,7 @@
   
   .post{
     align-self: flex-end;
-    margin-right: .8rem;
+    /* margin-right: .8rem; */
     margin-top: .2rem;
     background-color: var(--main-color);
     color:white ;

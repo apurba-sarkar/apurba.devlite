@@ -3,6 +3,7 @@ import "./style.css";
 
 const FeedBox = () => {
   return (
+   
     <div className="feedbox">
       <div className="feedbox-text">
         <textarea placeholder="Start writing...">write</textarea>
