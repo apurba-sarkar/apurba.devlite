@@ -1,8 +1,11 @@
+import FeedBox from "../Components/FeedBox";
 
 const Feed = () => {
   return (
-    <div>Feed</div>
-  )
-}
+    <div>
+      <FeedBox />
+    </div>
+  );
+};
 
-export default Feed
+export default Feed;

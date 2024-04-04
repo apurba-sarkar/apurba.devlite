@@ -87,7 +87,7 @@ function GuestPost({ list }) {
     return `${year}-${month}-${day}`;
   }
 
-  const images = ['anaya.jpg', 'bunny.jpeg', 'asuna.jpeg', 'chizu.jpeg','asuna.jpeg','aqua.png','miku.png','saku.png','siesta.png'];
+  const images = ['izumi.png', 'bunny.jpeg', 'asuna.jpeg', 'chizu.jpeg','asuna.jpeg','aqua.png','miku.png','saku.png','siesta.png'];
   const randomIndex = Math.floor(Math.random() * images.length);
   const randomImage = images[randomIndex];
   return (
