@@ -38,7 +38,7 @@ const App = () => {
         <div className="sticky">
           <Primary />
         </div>
-<Alert/>
+        <Alert />
         <Banner />
         <div className="wrapper">
           {/* <Feed/> */}

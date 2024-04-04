@@ -46,6 +46,25 @@ a:hover {
     font-size: 120%;
   }
 .respo{
+  padding: 0 20rem;
+}
+
+}
+
+@media (60em>width > 47rem ){
+  /* html{
+    font-size: 120%;
+  } */
+.respo{
+  padding: 0 10rem;
+}
+
+}
+@media (width>70em ){
+  /* html{
+    font-size: 120%;
+  } */
+.respo{
   padding: 0 30rem;
 }
 

@@ -185,17 +185,84 @@ nav a {
 
 @media (width>60em) {
   .feedbox {
-  
     /* width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
      */
-     padding:0 8rem;
+    padding: 0 8rem;
   }
-  
 }
 
-.feedbox-text textarea{
+.feedbox-text textarea {
   resize: none;
+}
+
+/* feetposts */
+.mainbox {
+  /* background-color: #495057; */
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+  border: 2px solid var(--main-color);
+  border-radius: 0.3rem;
+}
+
+.h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.desc {
+  margin-top: -0.5rem;
+  /* line-height: -0.5rem;
+   */
+   /* color: #cc0088; */
+  line-height: 1.2rem;
+  margin-bottom: .5rem;
+}
+
+.lnk {
+  color: #495057;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.inct {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.like-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.tag {
+  color: var(--main-color);
+}
+
+.img{
+  background-color: aqua  ;
+  height: 12rem;
+  width: 100%;
+  position: relative;
+  /* z-index: 2; */
+  /* overflow: hidden; */
+}
+
+@media (width>60em) {
+  .mainbox {
+    /* width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     */
+    /* padding: 0 20rem; */
+  }
 }

@@ -171,6 +171,7 @@ function GuestPost({ list }) {
                 textAlign: "justify",
                 lineHeight: "1rem",
                 fontSize: ".9rem",
+                
                 // marginTop:"rem"
               }}
             >

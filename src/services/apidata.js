@@ -52,3 +52,15 @@ export async function postVisiters(newData) {
   }
   return data;
 }
+
+
+//feeds
+export async function getFeeds() {
+  let { data, error } = await supabase.from("feed").select("*");
+
+  if (error) {
+    console.error(error.message);
+    throw new Error("feeds could not be loaded");
+  }
+  return data;
+}
