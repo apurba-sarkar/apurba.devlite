@@ -51,7 +51,7 @@ a:hover {
 
 }
 
-@media (60em>width > 47rem ){
+@media (65em>width > 47rem ){
   /* html{
     font-size: 120%;
   } */
@@ -60,7 +60,16 @@ a:hover {
 }
 
 }
-@media (width>70em ){
+@media (width>65em ){
+  /* html{
+    font-size: 120%;
+  } */
+.respo{
+  /* padding: 0 30rem; */
+}
+
+}
+@media (width>90em ){
   /* html{
     font-size: 120%;
   } */
