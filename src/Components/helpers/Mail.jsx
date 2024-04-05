@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import emailjs from "@emailjs/browser";
 import { useContext, useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -33,7 +34,7 @@ export const Mail = () => {
   };
 
   return (
-    <div className="main-form" style={{color: mode?"white":"initial"}}>
+    <div className="main-form" style={{ color: mode ? "white" : "initial" }}>
       <div style={{ fontSize: "3rem", fontWeight: "bold" }}>Ping me 🔔 </div>
       <div style={{ textAlign: "justify", marginBottom: "2rem" }}>
         "Are you ready to take your project to the new heights? I invite you to
@@ -48,12 +49,32 @@ export const Mail = () => {
       </div>
       <form ref={form} onSubmit={sendEmail} className="form">
         <label for="name">Name</label>
-        <input type="text" name="user_name" id="name" />
+        <input
+          type="text"
+          name="user_name"
+          id="name"
+          style={{
+            backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
+            color: mode ? "white" : "var(--main-color)",
+          }}
+        />
         <label for="email">Email</label>
-        <input type="email" name="user_email" id="email" />
+        <input
+          type="email"
+          name="user_email"
+          id="email"
+          style={{
+            backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
+            color: mode ? "white" : "var(--main-color)",
+          }}
+        />
         <label for="msg">Message</label>
         <textarea
-          style={{ resize: "none" }}
+          style={{
+            resize: "none",
+            backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
+            color: mode ? "white" : "var(--main-color)",
+          }}
           name="message"
           className="message"
           rows="8"

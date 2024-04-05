@@ -13,11 +13,19 @@ import { Modes } from "../App";
 
 const Guestbook = () => {
   const [isActive, setIsActive] = useState(false);
-const mode = useContext(Modes)
+  const mode = useContext(Modes);
   return (
     <div>
-      <div style={{ fontSize: "3rem", fontWeight: "bold", color: mode?"white":"initial" }}>Response Time </div>
-      <div style={{ color: mode?"white":"initial" }}>
+      <div
+        style={{
+          fontSize: "3rem",
+          fontWeight: "bold",
+          color: mode ? "white" : "initial",
+        }}
+      >
+        Response Time{" "}
+      </div>
+      <div style={{ color: mode ? "white" : "initial" }}>
         Thank you for considering me for your project! I'm thrilled at the
         opportunity to collaborate with you. Please provide some feedback of
         your experience and those will be added below of this page.
@@ -30,7 +38,11 @@ const mode = useContext(Modes)
             <button
               className=".sbutton
              collapsed border"
-             style={{boxShadow: mode ? "0 0 0 5px black, 0 0 0 8px var(--main-color)":"initial"}}
+              style={{
+                boxShadow: mode
+                  ? "0 0 0 5px black, 0 0 0 8px var(--main-color)"
+                  : "initial",
+              }}
               onClick={() => setIsActive(!isActive)}
             >
               {" "}
@@ -48,6 +60,7 @@ export default Guestbook;
 
 // eslint-disable-next-line react/prop-types
 const Collapsed = ({ setIsActive }) => {
+  const mode = useContext(Modes);
   const queryClient = useQueryClient();
   const { register, handleSubmit, reset, formState } = useForm();
   const { errors } = formState;
@@ -89,11 +102,17 @@ const Collapsed = ({ setIsActive }) => {
       onSubmit={handleSubmit(onSubmit, onError)}
     >
       {/* <button>Guestbook</button> */}
-      <label for="name">Name</label>
+      <label for="name" style={{ color: mode ? "white" : "initial" }}>
+        Name
+      </label>
       <input
         type="text"
         id="name"
         className="message"
+        style={{ 
+          backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
+          color: mode ? "white" : "var(--main-color)",
+        }}
         defaultValue=""
         {...register("name", {
           required: "This field is required",
@@ -107,12 +126,19 @@ const Collapsed = ({ setIsActive }) => {
             fontSize: ".8rem",
             marginTop: ".3rem",
             color: "red",
+           
           }}
         >
           <span> * Can't be empty</span>
         </div>
       )}
-      <label for="comment">Comment</label>
+      <label
+        for="comment"
+        style={{ backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
+        color: mode ? "white" : "var(--main-color)",}}
+      >
+        Comment
+      </label>
       <textarea
         name=""
         rows="8"
@@ -122,7 +148,7 @@ const Collapsed = ({ setIsActive }) => {
           required: "This field is required",
         })}
         defaultValue=""
-        style={{ resize: "none" }}
+        style={{ resize: "none", backgroundColor:mode ? "var(--dark-bg)":"initial" }}
       ></textarea>
       {errors?.name?.message && (
         <div
@@ -138,10 +164,10 @@ const Collapsed = ({ setIsActive }) => {
         </div>
       )}
       <div>
-        <button className="cbutton" onClick={() => setIsActive(false)}>
+        <button className="cbutton" style={{backgroundColor: mode ? "black":"initial"}} onClick={() => setIsActive(false)}>
           x
         </button>
-        <button className="sbutton" id="cbtn">
+        <button className="sbutton" id="cbtn" style={{color:mode?"black":"initial"}}>
           Comment
         </button>
       </div>
