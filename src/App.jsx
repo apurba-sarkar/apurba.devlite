@@ -12,6 +12,7 @@ import Guestbook from "./pages/Guestbook";
 import Profile from "./Components/Profile";
 import Banner from "./Components/Banner";
 import ProgressBar from "react-scroll-progress-bar";
+import AnimatedCursor from "react-animated-cursor"
 import {
   useQuery,
   useMutation,
@@ -34,6 +35,7 @@ const queryClient = new QueryClient({
 const App = () => {
   return (
     <div className="respo">
+       <AnimatedCursor />
       <ProgressBar bgcolor="#cc0088" duration="1" />
       <QueryClientProvider client={queryClient}>
         <div className="sticky">
