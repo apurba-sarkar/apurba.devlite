@@ -98,6 +98,7 @@ const Header2 = () => {
                 placeholder="enter your email"
                 style={{
                   backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
+                  color: mode ? "white" : "var(--main-color)",
                 }}
               />
             </div>
