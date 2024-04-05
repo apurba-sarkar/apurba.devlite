@@ -109,10 +109,7 @@ const Collapsed = ({ setIsActive }) => {
         type="text"
         id="name"
         className="message"
-        style={{ 
-          backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
-          color: mode ? "white" : "var(--main-color)",
-        }}
+        style={{ backgroundColor:mode ? "var(--dark-bg)":"initial"}}
         defaultValue=""
         {...register("name", {
           required: "This field is required",
@@ -134,8 +131,7 @@ const Collapsed = ({ setIsActive }) => {
       )}
       <label
         for="comment"
-        style={{ backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
-        color: mode ? "white" : "var(--main-color)",}}
+        style={{ color: mode ? "white" : "initial" }}
       >
         Comment
       </label>
