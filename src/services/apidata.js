@@ -64,3 +64,28 @@ export async function getFeeds() {
   }
   return data;
 }
+
+
+
+export async function updateLikes(newData,id) {
+  // console.log("from other");
+  // console.log(newData);
+  // const randomNumber = Math.floor(Math.random() * 4) + 1;
+  const incLikes = newData ++;
+
+  // console.log(incVisit);
+
+  
+  const { data, error } = await supabase
+    .from("")
+    .update({ likes: incLikes })
+    .eq("id", id)
+    .select();
+
+  if (error) {
+    console.error(error.message);
+    throw new Error("Something went wrong");
+  }
+  return data;
+}
+

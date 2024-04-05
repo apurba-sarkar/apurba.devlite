@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import { BarLoader } from "react-spinners";
 import { FaReplyd } from "react-icons/fa";
 import { BsReplyAllFill } from "react-icons/bs";
-
+import { dateparser } from "./dateparser";
 
 function AllPost() {
   const {
@@ -41,18 +41,18 @@ function AllPost() {
   //  }
 
   //
-// console.log(list)
+  // console.log(list)
 
-const filterPinned = list.filter(num=>num.pinned == true)
-// console.log(filterPinned)
+  const filterPinned = list.filter((num) => num.pinned == true);
+  // console.log(filterPinned)
 
-const unPinned = list.filter(num=>num.pinned == false)
-// console.log(unPinned)
+  const unPinned = list.filter((num) => num.pinned == false);
+  // console.log(unPinned)
 
-const filteredList = [...filterPinned,...unPinned] 
-// console.log(filteredList)
+  const filteredList = [...filterPinned, ...unPinned];
+  // console.log(filteredList)
   return (
-    <div style={{ marginTop: "1.5rem", }}>
+    <div style={{ marginTop: "1.5rem" }}>
       <div
         style={{
           fontSize: "1.2rem",
@@ -70,7 +70,8 @@ const filteredList = [...filterPinned,...unPinned]
           gap: "1rem",
         }}
       >
-        {filteredList && filteredList.map((list) => <GuestPost list={list} key={list.id} />)}
+        {filteredList &&
+          filteredList.map((list) => <GuestPost list={list} key={list.id} />)}
         {/* <GuestPost/> */}
       </div>
     </div>
@@ -78,16 +79,26 @@ const filteredList = [...filterPinned,...unPinned]
 }
 
 function GuestPost({ list }) {
-  function trans(time) {
-    const timestamp = new Date(time);
-    const year = timestamp.getFullYear();
-    const month = ("0" + (timestamp.getMonth() + 1)).slice(-2); // Adding leading zero if needed
-    const day = ("0" + timestamp.getDate()).slice(-2); // Adding leading zero if needed
+  // function trans(time) {
+  //   const timestamp = new Date(time);
+  //   const year = timestamp.getFullYear();
+  //   const month = ("0" + (timestamp.getMonth() + 1)).slice(-2); // Adding leading zero if needed
+  //   const day = ("0" + timestamp.getDate()).slice(-2); // Adding leading zero if needed
 
-    return `${year}-${month}-${day}`;
-  }
+  //   return `${year}-${month}-${day}`;
+  // }
 
-  const images = ['izumi.png', 'bunny.jpeg', 'asuna.jpeg', 'chizu.jpeg','asuna.jpeg','aqua.png','miku.png','saku.png','siesta.png'];
+  const images = [
+    "izumi.png",
+    "bunny.jpeg",
+    "asuna.jpeg",
+    "chizu.jpeg",
+    "asuna.jpeg",
+    "aqua.png",
+    "miku.png",
+    "saku.png",
+    "siesta.png",
+  ];
   const randomIndex = Math.floor(Math.random() * images.length);
   const randomImage = images[randomIndex];
   return (
@@ -161,7 +172,7 @@ function GuestPost({ list }) {
                   color: "var(--main-color)",
                 }}
               >
-                {trans(list.created_at)}
+                {dateparser(list.created_at)}
               </div>
             </div>
 
@@ -171,7 +182,7 @@ function GuestPost({ list }) {
                 textAlign: "justify",
                 lineHeight: "1rem",
                 fontSize: ".9rem",
-                
+
                 // marginTop:"rem"
               }}
             >
@@ -185,7 +196,7 @@ function GuestPost({ list }) {
         <div style={{ marginLeft: "3.5rem", marginTop: ".5rem" }}>
           <div style={{ display: "flex", gap: ".4rem", fontSize: "1.3rem" }}>
             <BsReplyAllFill color="#cc0088" />
-            <div style={{display:"flex"}}>
+            <div style={{ display: "flex" }}>
               <img
                 src="main3.jpg"
                 alt=""

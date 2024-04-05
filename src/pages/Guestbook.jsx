@@ -7,8 +7,8 @@ import AllPost from "../Components/helpers/GuestPost";
 import { useMutation } from "@tanstack/react-query";
 import { useQueryClient } from "@tanstack/react-query";
 import { postGuestData } from "../services/apidata";
-import { ToastContainer, toast } from 'react-toastify';
-import "./Pagestyles/GuestBook.css"
+import { ToastContainer, toast } from "react-toastify";
+import "./Pagestyles/GuestBook.css";
 
 const Guestbook = () => {
   const [isActive, setIsActive] = useState(false);
@@ -49,7 +49,7 @@ const Collapsed = ({ setIsActive }) => {
   const queryClient = useQueryClient();
   const { register, handleSubmit, reset, formState } = useForm();
   const { errors } = formState;
-  console.log(errors);
+  // console.log(errors);
 
   function onSubmit(data) {
     mutate(data);
@@ -61,12 +61,12 @@ const Collapsed = ({ setIsActive }) => {
     mutationFn: postGuestData,
     onSuccess: () => {
       // console.log("new note added succesfully!");
-      toast.success("Comment added Successfully!")
+      toast.success("Comment added Successfully!");
       // toast.success("new note added succesfully!");
       queryClient.invalidateQueries({
         queryKey: ["guestData"],
       });
-      setIsActive(false)
+      setIsActive(false);
     },
 
     onError: (err) => {
@@ -82,10 +82,8 @@ const Collapsed = ({ setIsActive }) => {
 
   return (
     <form
-      style={{ display: "flex", flexDirection: "column", 
-   
-     }}
-     className="guestb"
+      style={{ display: "flex", flexDirection: "column" }}
+      className="guestb"
       onSubmit={handleSubmit(onSubmit, onError)}
     >
       {/* <button>Guestbook</button> */}
@@ -106,7 +104,7 @@ const Collapsed = ({ setIsActive }) => {
             justifyContent: "end",
             fontSize: ".8rem",
             marginTop: ".3rem",
-            color:"red"
+            color: "red",
           }}
         >
           <span> * Can't be empty</span>
@@ -122,16 +120,16 @@ const Collapsed = ({ setIsActive }) => {
           required: "This field is required",
         })}
         defaultValue=""
-        style={{resize:"none"}}
+        style={{ resize: "none" }}
       ></textarea>
-        {errors?.name?.message && (
+      {errors?.name?.message && (
         <div
           style={{
             display: "flex",
             justifyContent: "end",
             fontSize: ".8rem",
             marginTop: ".3rem",
-            color:"red"
+            color: "red",
           }}
         >
           <span> * Can't be empty</span>

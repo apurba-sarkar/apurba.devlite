@@ -208,12 +208,13 @@ nav a {
   color: var(--main-color);
 }
 .desc {
-  margin-top: -0.5rem;
+  margin-top: 1rem;
   /* line-height: -0.5rem;
    */
   /* color: #cc0088; */
   line-height: 1.2rem;
   margin-bottom: 0.5rem;
+  text-align: justify;
 }
 
 .lnk {
@@ -233,8 +234,9 @@ nav a {
 }
 
 .like-btn {
-  background-color: transparent;
+  /* background-color: transparent; */
   border: none;
+  cursor: pointer;
 }
 
 .tag {
@@ -248,4 +250,24 @@ nav a {
   position: relative;
   /* z-index: 2; */
   /* overflow: hidden; */
+}
+
+.subhead{
+  color: #495057;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: -.5rem;
+  margin-bottom: .5rem;
+}
+
+.sourcecode{
+  color: var(--main-color);
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+  font-style: italic;
+  margin-left: -1rem;
+}
+.sourcecode:hover{
+background-color: transparent;
 }

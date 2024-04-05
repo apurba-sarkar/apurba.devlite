@@ -14,6 +14,16 @@ const Feed = () => {
     queryKey: ["FeedData"],
     queryFn: getFeeds,
   });
+
+  function trans(time) {
+    const timestamp = new Date(time);
+    const year = timestamp.getFullYear();
+    const month = ("0" + (timestamp.getMonth() + 1)).slice(-2); // Adding leading zero if needed
+    const day = ("0" + timestamp.getDate()).slice(-2); // Adding leading zero if needed
+
+    return `${year}-${month}-${day}`;
+  }
+
   console.log(list);
   if (isLoading)
     return (

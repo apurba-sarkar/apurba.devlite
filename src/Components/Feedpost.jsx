@@ -1,36 +1,81 @@
+/* eslint-disable react/prop-types */
 import "./style.css";
 import { AiFillLike } from "react-icons/ai";
 import { AiOutlineLike } from "react-icons/ai";
 import KeenSlider from "./helpers/KeenSlider";
-// import { getGuestData } from "../../services/apidata";
-
+import { dateparser } from "./helpers/dateparser";
+import { updateLikes } from "../services/apidata";
+import { useMutation } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
+// import { useQueryClient } from "@tanstack/react-query";
+import { ToastContainer, toast } from "react-toastify";
 const Feedpost = ({ data }) => {
   // console.log(data);
+  const queryClient = useQueryClient();
+  const onLike = () => {
+    
+  };
+
+  const { mutate, isLoading } = useMutation({
+    
+    mutationFn: updateLikes,
+    onSuccess: () => {
+      // console.log("new note added succesfully!");
+      toast.success("Like added Successfully!");
+      // toast.success("new note added succesfully!");
+      queryClient.invalidateQueries({
+        queryKey: ["LikeData"],
+      });
+    },
+
+    onError: (err) => {
+      toast.error(err.message);
+      // console.log(err);
+    },
+    // if (isLoading) return <PropagateLoader/>;
+  });
+
+ 
   return (
     <div className="mainbox">
       <div>
         <div className="h1">{data.heading}</div>
-        <div className="desc">{data.desc}</div>
+        <div className="subhead">{data.subhead}</div>
 
         <KeenSlider
           image1={data.image1}
           image2={data.image2}
           image3={data.image3}
         />
+        <div className="desc">{data.desc}</div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "start",
+            marginLeft: "-1rem",
+          }}
+        ></div>
 
         <div className="lnk">{data.links}</div>
         <div className="tag">{data.tags}</div>
+        <a className="sourcecode" href={data.link} target="_blank">
+          SourceCode
+        </a>
       </div>
       <div className="stats">
         <div className="inct">
-          <button className="like-btn">
+          {/* <button className="like-btn">
             {" "}
             <AiFillLike />
             <AiOutlineLike />
-          </button>
-          <div>{data.likes}</div>
+          </button> */}
+          {/* <div>{data.likes}</div> */}
         </div>
-        <div>{data.created_at}</div>
+        <div style={{ color: "var(--main-color)", fontWeight: "bold" }}>
+          {" "}
+          posted at :<span> {dateparser(data.created_at)}</span>
+        </div>
       </div>
     </div>
   );
