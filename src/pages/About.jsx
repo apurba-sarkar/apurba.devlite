@@ -3,12 +3,23 @@ import { RiDownload2Fill } from "react-icons/ri";
 import "../Components/style.css";
 import Qc from "../Components/Qc";
 import Hero from "../Components/Hero";
+import { useContext } from "react";
+import { Modes } from "../App";
 
 const About = () => {
+  const mode = useContext(Modes);
   return (
     <div style={{ fontSize: "1.1rem", textAlign: "justify" }}>
-      <div style={{ fontSize: "3rem", fontWeight: "bold" }}>Kon'nichiwa 👋</div>
-      <div>
+      <div
+        style={{
+          fontSize: "3rem",
+          fontWeight: "bold",
+          color: mode ? "white" : "initial",
+        }}
+      >
+        Kon'nichiwa 👋
+      </div>
+      <div style={{ color: mode ? "white" : "initial" }}>
         I am <span style={{ color: "var(--main-color)" }}> Apurba Sarkar </span>
         . I enjoys bringing ideas to life through coding. I support creative
         coding, that gives you the courage to create anything. I like discussing
@@ -17,7 +28,7 @@ const About = () => {
       </div>
 
       <Hero />
-      <div style={{ marginTop: ".5rem" }}>
+      <div style={{ marginTop: ".5rem", color: mode ? "white" : "initial" }}>
         I've had the honor of working with organizations like{" "}
         <span style={{ color: "var(--main-color)" }}>
           Qurinom Solutions, Teacheif Academy, Endosoft, and Wrkmen Tech Serv
@@ -41,7 +52,7 @@ const About = () => {
         >
           Tech Stack
         </div>
-        <div>
+        <div style={{ color: mode ? "white" : "initial" }}>
           <div style={{ fontWeight: "bold" }}>FrontEnd</div>
           <div className="imgStyle">
             <img src="html.png" alt="" />
@@ -91,7 +102,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div style={{ marginTop: ".5rem" }}>
+      <div style={{ marginTop: ".5rem", color: mode ? "white" : "initial" }}>
         I have a history of delivering outstanding results ahead of schedule.
         all the while paying close attention to well-structured code, design,
         accessibility, and performance. In addition to giving demos, I like to
@@ -102,7 +113,12 @@ const About = () => {
       <Qc />
 
       <div
-        style={{ display: "flex", justifyContent: "center", fontSize: "4rem" }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          fontSize: "4rem",
+         
+        }}
       >
         <div className="buttonStyle custom">
           <a
@@ -111,21 +127,21 @@ const About = () => {
             className="download"
             style={{ color: "white", backgroundColor: "transparent" }}
           >
-            <span style={{ fontSize: ".9rem" }} >Resume </span>{" "}
+            <span style={{ fontSize: ".9rem" }}>Resume </span>{" "}
             <RiDownload2Fill size={18} className="resume" />
           </a>
         </div>
       </div>
 
       <div
-        style={{ marginTop: ".5rem", fontSize: "1.2rem", fontWeight: "bold" }}
+        style={{ marginTop: ".5rem", fontSize: "1.2rem", fontWeight: "bold", color: mode ? "white" : "initial", }}
       >
         Scan, Reach out and say "Hey!". I look forward to hearing from you!
       </div>
       <div>
         <img src="qr.png" alt="" style={{ height: "8rem" }} />
       </div>
-      <div style={{ fontSize: "1.rem", fontWeight: "bold" }}>
+      <div style={{ fontSize: "1.rem", fontWeight: "bold", color: mode ? "white" : "initial", }}>
         {" "}
         Stay Connected !
       </div>

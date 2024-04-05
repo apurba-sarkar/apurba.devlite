@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../Components/helpers/Mail.css";
 import { useForm } from "react-hook-form";
 import AllPost from "../Components/helpers/GuestPost";
@@ -9,14 +9,15 @@ import { useQueryClient } from "@tanstack/react-query";
 import { postGuestData } from "../services/apidata";
 import { ToastContainer, toast } from "react-toastify";
 import "./Pagestyles/GuestBook.css";
+import { Modes } from "../App";
 
 const Guestbook = () => {
   const [isActive, setIsActive] = useState(false);
-
+const mode = useContext(Modes)
   return (
     <div>
-      <div style={{ fontSize: "3rem", fontWeight: "bold" }}>Response Time </div>
-      <div>
+      <div style={{ fontSize: "3rem", fontWeight: "bold", color: mode?"white":"initial" }}>Response Time </div>
+      <div style={{ color: mode?"white":"initial" }}>
         Thank you for considering me for your project! I'm thrilled at the
         opportunity to collaborate with you. Please provide some feedback of
         your experience and those will be added below of this page.
@@ -29,6 +30,7 @@ const Guestbook = () => {
             <button
               className=".sbutton
              collapsed border"
+             style={{boxShadow: mode ? "0 0 0 5px black, 0 0 0 8px var(--main-color)":"initial"}}
               onClick={() => setIsActive(!isActive)}
             >
               {" "}

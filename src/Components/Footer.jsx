@@ -8,10 +8,13 @@ import { FaLinkedin } from "react-icons/fa";
 import { BsFillThreadsFill } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
+import { useContext } from "react";
+import { Modes } from "../App";
 
 const Footer = () => {
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
+  const mode = useContext(Modes)
   // console.log(currentYear);
   return (
     <div
@@ -26,7 +29,7 @@ const Footer = () => {
         paddingTop:"1rem"
       }}
     >
-      <div style={{ display: "flex", gap: ".4rem", padding: "0 2rem" }}>
+      <div style={{ display: "flex", gap: ".4rem", padding: "0 2rem", color: mode ? "white" : "initial", }}>
         <FaRssSquare />
         <FaFacebook />
         <FaLinkedin />

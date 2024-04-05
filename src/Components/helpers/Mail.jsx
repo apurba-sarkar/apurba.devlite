@@ -1,12 +1,13 @@
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import "./Mail.css";
 import { useForm } from "react-hook-form";
+import { Modes } from "../../App";
 
 export const Mail = () => {
   // const [showForm,setShowForm] =useState(false)
-
+  const mode = useContext(Modes);
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -32,7 +33,7 @@ export const Mail = () => {
   };
 
   return (
-    <div className="main-form">
+    <div className="main-form" style={{color: mode?"white":"initial"}}>
       <div style={{ fontSize: "3rem", fontWeight: "bold" }}>Ping me 🔔 </div>
       <div style={{ textAlign: "justify", marginBottom: "2rem" }}>
         "Are you ready to take your project to the new heights? I invite you to
@@ -51,7 +52,13 @@ export const Mail = () => {
         <label for="email">Email</label>
         <input type="email" name="user_email" id="email" />
         <label for="msg">Message</label>
-        <textarea style={{resize:"none"}} name="message" className="message" rows="8" id="msg" />
+        <textarea
+          style={{ resize: "none" }}
+          name="message"
+          className="message"
+          rows="8"
+          id="msg"
+        />
         <button type="submit" onClick={sendEmail} className="sbutton">
           Send
         </button>

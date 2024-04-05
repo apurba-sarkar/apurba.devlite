@@ -12,7 +12,7 @@ import Guestbook from "./pages/Guestbook";
 import Profile from "./Components/Profile";
 import Banner from "./Components/Banner";
 import ProgressBar from "react-scroll-progress-bar";
-import AnimatedCursor from "react-animated-cursor"
+import AnimatedCursor from "react-animated-cursor";
 import {
   useQuery,
   useMutation,
@@ -23,6 +23,8 @@ import {
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Alert from "./Components/helpers/Alert";
 import Home from "./pages/Home";
+import Mode from "./Components/helpers/Mode";
+import { createContext, useState } from "react";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -32,39 +34,51 @@ const queryClient = new QueryClient({
   },
 });
 
+const Modes = createContext();
 const App = () => {
+  const [isDark, setIsDark] = useState(true);
+  // console.log(isDark);
+
   return (
-    <div className="respo">
-       <AnimatedCursor />
+    <div className="respo" style={{backgroundColor: isDark ?"black" : "initial"}}>
+      {/* <AnimatedCursor /> */}
+      <div className="mode">
+        <Mode setIsDark={setIsDark} isDark={isDark} />
+      </div>
+
       <ProgressBar bgcolor="#cc0088" duration="1" />
       <QueryClientProvider client={queryClient}>
-        <div className="sticky">
-          <Primary />
-        </div>
-        <Alert />
-        <Banner />
-        <div className="wrapper">
-          <Profile />
-          <Nav />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route exact path="/feed" element={<Feed />} />
-            <Route exact path="/content" element={<Content />} />
-            <Route exact path="/contact" element={<Contact />} />
-            <Route exact path="/projects" element={<Projects />} />
-            <Route exact path="/guestbook" element={<Guestbook />} />
-            {/* <Route path="/about" Component={<About />} /> */}
-          </Routes>
-          <Footer />
-        </div>
+        <Modes.Provider value={isDark}>
+          <div className="sticky">
+          
+            <Primary />    {/* first component logo and viewer*/}
+          </div>
+          <Alert />
+          <Banner /> {/* banner*/}
+          <div className="wrapper">
+            <Profile />{/* third component with personal info and stats*/}
+            <Nav />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route exact path="/feed" element={<Feed />} />
+              <Route exact path="/content" element={<Content />} />
+              <Route exact path="/contact" element={<Contact />} />
+              <Route exact path="/projects" element={<Projects />} />
+              <Route exact path="/guestbook" element={<Guestbook />} />
+              {/* <Route path="/about" Component={<About />} /> */}
+            </Routes>
+            <Footer />
+          </div>
 
-        {/* <ParticlesBg type="" bg={true} /> */}
-        {/* <ParticlesBg type="fountain" bg={true} /> */}
-        <ReactQueryDevtools initialIsOpen={false} />
+          {/* <ParticlesBg type="" bg={true} /> */}
+          {/* <ParticlesBg type="fountain" bg={true} /> */}
+          {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+        </Modes.Provider>
       </QueryClientProvider>
     </div>
   );
 };
 
 export default App;
+export { Modes };

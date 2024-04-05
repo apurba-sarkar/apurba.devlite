@@ -9,7 +9,10 @@ import { useMutation } from "@tanstack/react-query";
 import { useQueryClient } from "@tanstack/react-query";
 // import { useQueryClient } from "@tanstack/react-query";
 import { ToastContainer, toast } from "react-toastify";
+import { useContext } from "react";
+import { Modes } from "../App";
 const Feedpost = ({ data }) => {
+  const mode=useContext(Modes)
   // console.log(data);
   const queryClient = useQueryClient();
   const onLike = () => {
@@ -40,14 +43,14 @@ const Feedpost = ({ data }) => {
     <div className="mainbox">
       <div>
         <div className="h1">{data.heading}</div>
-        <div className="subhead">{data.subhead}</div>
+        <div className="subhead" style={{color: mode?"var(--dark-grey)":"initial"}}>{data.subhead}</div>
 
         <KeenSlider
           image1={data.image1}
           image2={data.image2}
           image3={data.image3}
         />
-        <div className="desc">{data.desc}</div>
+        <div className="desc" style={{color : mode? "white":"initial"}}>{data.desc}</div>
         <div
           style={{
             display: "flex",

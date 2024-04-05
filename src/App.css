@@ -87,4 +87,22 @@ a:hover {
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+
+}
+
+.mode{
+  background-color: #cc0088;
+  position: fixed;
+  z-index: 2;
+  bottom: 1rem;
+  left: 80%;
+  float: inline-end;
+  height: 3rem;
+  aspect-ratio: 1;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  border-radius: 50%;
+
+  
 }

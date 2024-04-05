@@ -2,9 +2,12 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 import Header2 from "./Header2";
 import "../Components/style.css";
+import { useContext } from "react";
+import { Modes } from "../App";
 
 
 const Profile = () => {
+  const mode = useContext(Modes)
   return (
     <div style={{ marginTop: "-5rem" }}>
       <div

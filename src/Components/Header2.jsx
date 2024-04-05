@@ -6,12 +6,15 @@ import { AiFillExperiment } from "react-icons/ai";
 import "./style.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useContext } from "react";
+import { Modes } from "../App";
 
 const Header2 = () => {
+  const mode = useContext(Modes);
   const toster = () => toast("request submitted");
 
   return (
-    <div style={{ marginTop: "-1rem" }}>
+    <div style={{ marginTop: "-1rem", color: mode ? "white" : "initial" }}>
       <div
         style={{
           display: "flex",
@@ -25,6 +28,7 @@ const Header2 = () => {
             fontSize: "2.5rem ",
             fontWeight: "bolder",
             marginTop: ".5rem",
+            color: "var(--main-color)",
           }}
         >
           Apurba Sarkar
@@ -45,7 +49,6 @@ const Header2 = () => {
             display: "flex",
             gap: "1rem",
             paddingTop: "1rem",
-            color: "var(--secondary-color)",
             flexWrap: "wrap",
             alignItems: "center",
             justifyContent: "center",
@@ -93,11 +96,12 @@ const Header2 = () => {
                 className="inputtext"
                 type="text"
                 placeholder="enter your email"
+                style={{
+                  backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
+                }}
               />
             </div>
-            <button className="sendbutton"
-            
-            onClick={toster}>
+            <button className="sendbutton" onClick={toster}>
               Send
             </button>
             <ToastContainer />

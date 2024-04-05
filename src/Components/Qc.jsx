@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import "./style.css";
+import { Modes } from "../App";
+
 const Qc = () => {
+  const mode = useContext(Modes);
   return (
-    <div style={{ marginBottom: ".85rem",marginTop:'1rem' }}>
+    <div style={{ marginBottom: ".85rem",marginTop:'1rem', color: mode ? "white" : "initial", }}>
       <div
         style={{
           color: "var(--main-color",

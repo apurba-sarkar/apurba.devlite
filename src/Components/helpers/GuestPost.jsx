@@ -8,8 +8,11 @@ import { BarLoader } from "react-spinners";
 import { FaReplyd } from "react-icons/fa";
 import { BsReplyAllFill } from "react-icons/bs";
 import { dateparser } from "./dateparser";
+import { useContext } from "react";
+import { Modes } from "../../App";
 
 function AllPost() {
+
   const {
     isLoading,
     data: list,
@@ -79,6 +82,8 @@ function AllPost() {
 }
 
 function GuestPost({ list }) {
+  
+  const mode = useContext(Modes)
   // function trans(time) {
   //   const timestamp = new Date(time);
   //   const year = timestamp.getFullYear();
@@ -100,7 +105,7 @@ function GuestPost({ list }) {
     "siesta.png",
   ];
   const randomIndex = Math.floor(Math.random() * images.length);
-  const randomImage = images[randomIndex];
+  const randomImage = images[randomIndex]; 
   return (
     <div>
       <div
@@ -182,6 +187,7 @@ function GuestPost({ list }) {
                 textAlign: "justify",
                 lineHeight: "1rem",
                 fontSize: ".9rem",
+            
 
                 // marginTop:"rem"
               }}
@@ -247,6 +253,7 @@ function GuestPost({ list }) {
                     textAlign: "justify",
                     lineHeight: ".9rem",
                     fontSize: ".8rem",
+                    color: mode?"white":"initial" 
                   }}
                 >
                   {list.replymessage}

@@ -1,12 +1,14 @@
 :root {
   --main-color: #cc0088;
   --secondary-color: #495057;
+  --dark-grey: #a8a8a8;
+  --dark-bg:#3e2f42
 }
 
 .small {
   display: flex;
   /* justify-content: center; */
-  align-items: center;
+  align-items: center;                                                    
   gap: 0.3rem;
 }
 
@@ -15,7 +17,6 @@
   border: none;
   height: 2rem;
   padding: 0.3rem 1.5rem;
-  background-color: rgba(225, 218, 218, 0.462);
   color: #cc0088;
   border-radius: 5rem 0 0 5rem;
   margin-top: 0.2rem;
@@ -143,10 +144,10 @@ nav a {
 
 .links {
   /* background-color: wheat; */
-  border: solid 2px var(--main-color);
+  /* border: solid 2px var(--main-color); */
   width: 100%;
   /* border-radius: 0 0 1rem 0 ; */
-  padding: 0.1rem 1rem;
+  /* padding: 0.1rem 1rem; */
   margin-top: -0.2rem;
   background-color: #f1eeee;
   height: 1.7rem;
