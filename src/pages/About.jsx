@@ -87,7 +87,7 @@ const About = () => {
             <div className="imgStyle">
               <img src="git.png" alt="" /> <img src="github.png" alt="" />{" "}
               <img src="lc2.png" alt="" style={{ width: "6rem" }} />
-              <img src="webdriverio.png" alt="" />{" "}
+              <img src="io.png" alt="" />{" "}
               <img src="postman.png" alt="" /> <img src="figma.png" alt="" />{" "}
             </div>
           </div>
