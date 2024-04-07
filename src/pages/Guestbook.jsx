@@ -109,7 +109,10 @@ const Collapsed = ({ setIsActive }) => {
         type="text"
         id="name"
         className="message"
-        style={{ backgroundColor:mode ? "var(--dark-bg)":"#f1eeee"}}
+        style={{
+          backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
+          color: mode ? "white" : "var(--main-color)",
+        }}
         defaultValue=""
         {...register("name", {
           required: "This field is required",
@@ -123,16 +126,12 @@ const Collapsed = ({ setIsActive }) => {
             fontSize: ".8rem",
             marginTop: ".3rem",
             color: "red",
-           
           }}
         >
           <span> * Can't be empty</span>
         </div>
       )}
-      <label
-        for="comment"
-        style={{ color: mode ? "white" : "initial" }}
-      >
+      <label for="comment" style={{ color: mode ? "white" : "initial" }}>
         Comment
       </label>
       <textarea
@@ -144,7 +143,11 @@ const Collapsed = ({ setIsActive }) => {
           required: "This field is required",
         })}
         defaultValue=""
-        style={{ resize: "none", backgroundColor:mode ? "var(--dark-bg)":"#f1eeee" }}
+        style={{
+          resize: "none",
+          backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
+          color: mode ? "white" : "var(--main-color)",
+        }}
       ></textarea>
       {errors?.name?.message && (
         <div
@@ -160,10 +163,18 @@ const Collapsed = ({ setIsActive }) => {
         </div>
       )}
       <div>
-        <button className="cbutton" style={{backgroundColor: mode ? "black":"initial"}} onClick={() => setIsActive(false)}>
+        <button
+          className="cbutton"
+          style={{ backgroundColor: mode ? "black" : "initial" }}
+          onClick={() => setIsActive(false)}
+        >
           x
         </button>
-        <button className="sbutton" id="cbtn" style={{color:mode?"black":"initial"}}>
+        <button
+          className="sbutton"
+          id="cbtn"
+          style={{ color: mode ? "black" : "initial" }}
+        >
           Comment
         </button>
       </div>
