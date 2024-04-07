@@ -25,7 +25,7 @@ const Guestbook = () => {
       >
         Response Time{" "}
       </div>
-      <div style={{ color: mode ? "white" : "initial" }}>
+      <div style={{ color: mode ? "white" : "initial" ,textAlign:"justify"}}>
         Thank you for considering me for your project! I'm thrilled at the
         opportunity to collaborate with you. Please provide some feedback of
         your experience and those will be added below of this page.

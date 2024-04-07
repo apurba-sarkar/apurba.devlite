@@ -10,7 +10,7 @@ const Mode = ({ setIsDark, isDark }) => {
       // style={{ backgroundColor: isDark ? "white" : "initial" }}
       onClick={() => setIsDark(!isDark)}
     >
-      {isDark ? <MdNightsStay /> : <IoIosSunny />}
+      {isDark ? <MdNightsStay /> : <IoIosSunny color="white"/>}
     </button>
   );
 };

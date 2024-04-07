@@ -16,11 +16,12 @@ const About = () => {
           fontSize: "3rem",
           fontWeight: "bold",
           color: mode ? "white" : "initial",
+          
         }}
       >
         Kon'nichiwa 👋
       </div>
-      <div style={{ color: mode ? "white" : "initial" }}>
+      <div style={{ color: mode ? "white" : "initial",textAlign:"justify" }}>
         I am <span style={{ color: "var(--main-color)" }}> Apurba Sarkar </span>
         . I enjoys bringing ideas to life through coding. I support creative
         coding, that gives you the courage to create anything. I like discussing
