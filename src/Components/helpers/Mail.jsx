@@ -15,7 +15,7 @@ export const Mail = () => {
     if (form.current != "") {
       e.preventDefault();
       form.current.reset();
-      console.log(form.current);
+      // console.log(form.current);
     }
 
     emailjs

@@ -68,7 +68,7 @@ const Collapsed = ({ setIsActive }) => {
 
   function onSubmit(data) {
     mutate(data);
-    console.log(data);
+    // console.log(data);
     reset();
   }
 

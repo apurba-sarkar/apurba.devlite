@@ -16,7 +16,7 @@ const Feed = () => {
   });
 
 
-  console.log(list);
+  // console.log(list);
   if (isLoading)
     return (
       <div

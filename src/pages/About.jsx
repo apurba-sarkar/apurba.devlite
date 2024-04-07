@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import "./Pagestyles/About.css";
 import { RiDownload2Fill } from "react-icons/ri";
 import "../Components/style.css";
