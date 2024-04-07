@@ -15,7 +15,7 @@ const FeedBox = () => {
             color: mode ? "white" : "var(--main-color)",
           }}
         >
-          write
+         
         </textarea>
         <div
           style={{
