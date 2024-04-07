@@ -109,7 +109,7 @@ const Collapsed = ({ setIsActive }) => {
         type="text"
         id="name"
         className="message"
-        style={{ backgroundColor:mode ? "var(--dark-bg)":"initial"}}
+        style={{ backgroundColor:mode ? "var(--dark-bg)":"#f1eeee"}}
         defaultValue=""
         {...register("name", {
           required: "This field is required",
@@ -144,7 +144,7 @@ const Collapsed = ({ setIsActive }) => {
           required: "This field is required",
         })}
         defaultValue=""
-        style={{ resize: "none", backgroundColor:mode ? "var(--dark-bg)":"initial" }}
+        style={{ resize: "none", backgroundColor:mode ? "var(--dark-bg)":"#f1eeee" }}
       ></textarea>
       {errors?.name?.message && (
         <div

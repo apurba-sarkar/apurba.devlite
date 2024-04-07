@@ -6,12 +6,16 @@ import { AiFillExperiment } from "react-icons/ai";
 import "./style.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Modes } from "../App";
 
 const Header2 = () => {
+  const [email, setEmail] = useState("");
   const mode = useContext(Modes);
-  const toster = () => toast("request submitted");
+  const toster = () => {
+    toast("request submitted");
+    setEmail("");
+  };
 
   return (
     <div style={{ marginTop: "-1rem", color: mode ? "white" : "initial" }}>
@@ -100,6 +104,8 @@ const Header2 = () => {
                   backgroundColor: mode ? "var(--dark-bg)" : "#f1eeee",
                   color: mode ? "white" : "var(--main-color)",
                 }}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <button className="sendbutton" onClick={toster}>

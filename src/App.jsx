@@ -19,6 +19,7 @@ const LazyAbout = React.lazy(() => import("./pages/About"));
 const LazyFeed = React.lazy(() => import("./pages/Feed"));
 const LazyContact = React.lazy(() => import("./pages/Contact"));
 const LazyGuestbook = React.lazy(() => import("./pages/Guestbook"));
+const LazyHome = React.lazy(() => import("./pages/Home"));
 // const LazyAbout = React.lazy(() => import("./pages/About"));
 
 import {
@@ -30,7 +31,6 @@ import {
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Alert from "./Components/helpers/Alert";
-import Home from "./pages/Home";
 import Mode from "./Components/helpers/Mode";
 import { createContext, useState } from "react";
 
@@ -57,7 +57,6 @@ const App = () => {
         <Mode setIsDark={setIsDark} isDark={isDark} />
       </div>
 
-     
       <QueryClientProvider client={queryClient}>
         <Modes.Provider value={isDark}>
           <div className="sticky">
@@ -70,7 +69,14 @@ const App = () => {
             {/* third component with personal info and stats*/}
             <Nav />
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route
+                path="/"
+                element={
+                  <Suspense fallback={<div>Loading</div>}>
+                    <LazyHome />{" "}
+                  </Suspense>
+                }
+              />
 
               <Route
                 path="/about"
