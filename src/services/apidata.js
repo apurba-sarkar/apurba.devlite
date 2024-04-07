@@ -1,7 +1,10 @@
 import supabase from "./supabase";
 
 export async function getGuestData() {
-  let { data, error } = await supabase.from("guestpost").select("*");
+  let { data, error } = await supabase
+    .from("guestpost")
+    .select("*")
+    .order("created_at", { ascending: false });
   if (error) {
     console.error(error);
     throw new Error("cabin could not be loaded");
@@ -39,7 +42,6 @@ export async function postVisiters(newData) {
 
   // console.log(incVisit);
 
-  
   const { data, error } = await supabase
     .from("visit")
     .update({ visit: incVisit })
@@ -53,10 +55,12 @@ export async function postVisiters(newData) {
   return data;
 }
 
-
 //feeds
 export async function getFeeds() {
-  let { data, error } = await supabase.from("feed").select("*");
+  let { data, error } = await supabase
+    .from("feed")
+    .select("*")
+    .order("created_at", { ascending: false });
 
   if (error) {
     console.error(error.message);
@@ -65,17 +69,14 @@ export async function getFeeds() {
   return data;
 }
 
-
-
-export async function updateLikes(newData,id) {
+export async function updateLikes(newData, id) {
   // console.log("from other");
   // console.log(newData);
   // const randomNumber = Math.floor(Math.random() * 4) + 1;
-  const incLikes = newData ++;
+  const incLikes = newData++;
 
   // console.log(incVisit);
 
-  
   const { data, error } = await supabase
     .from("")
     .update({ likes: incLikes })
@@ -88,4 +89,3 @@ export async function updateLikes(newData,id) {
   }
   return data;
 }
-

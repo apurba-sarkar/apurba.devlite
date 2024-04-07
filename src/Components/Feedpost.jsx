@@ -12,15 +12,12 @@ import { ToastContainer, toast } from "react-toastify";
 import { useContext } from "react";
 import { Modes } from "../App";
 const Feedpost = ({ data }) => {
-  const mode=useContext(Modes)
+  const mode = useContext(Modes);
   // console.log(data);
   const queryClient = useQueryClient();
-  const onLike = () => {
-    
-  };
+  const onLike = () => {};
 
   const { mutate, isLoading } = useMutation({
-    
     mutationFn: updateLikes,
     onSuccess: () => {
       // console.log("new note added succesfully!");
@@ -38,19 +35,36 @@ const Feedpost = ({ data }) => {
     // if (isLoading) return <PropagateLoader/>;
   });
 
- 
   return (
     <div className="mainbox">
       <div>
         <div className="h1">{data.heading}</div>
-        <div className="subhead" style={{color: mode?"var(--dark-grey)":"initial"}}>{data.subhead}</div>
-
-        <KeenSlider
-          image1={data.image1}
-          image2={data.image2}
-          image3={data.image3}
-        />
-        <div className="desc" style={{color : mode? "white":"initial"}}>{data.desc}</div>
+        <div
+          className="subhead"
+          style={{ color: mode ? "var(--dark-grey)" : "initial" }}
+        >
+          {data.subhead}
+        </div>
+        {data.image1 ? (
+          <KeenSlider
+            image1={data.image1}
+            image2={data.image2}
+            image3={data.image3}
+          />
+        ) : (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <div>sadklaskdlkaldka;l</div>
+          </div>
+        )}
+        <div className="desc" style={{ color: mode ? "white" : "initial" }}>
+          {data.desc}
+        </div>
         <div
           style={{
             display: "flex",
@@ -62,9 +76,13 @@ const Feedpost = ({ data }) => {
 
         <div className="lnk">{data.links}</div>
         <div className="tag">{data.tags}</div>
-        <a className="sourcecode" href={data.link} target="_blank">
-          SourceCode
-        </a>
+        {data.image1 ? (
+          <a className="sourcecode" href={data.link} target="_blank">
+            SourceCode
+          </a>
+        ) : (
+          ""
+        )}
       </div>
       <div className="stats">
         <div className="inct">

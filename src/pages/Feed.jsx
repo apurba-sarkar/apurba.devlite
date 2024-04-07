@@ -36,10 +36,16 @@ const Feed = () => {
 
   return (
     <div className="feeds">
-      <div style={{ fontSize: "3rem", color: mode ? " white" : "initial" }}>
+      <div
+        style={{
+          fontSize: "3rem",
+          fontWeight: "bold",
+          color: mode ? " white" : "initial",
+        }}
+      >
         Timeline
       </div>
-      <div style={{ color: mode ? "white" : "initial" }}>
+      <div style={{ color: mode ? "white" : "initial", textAlign: "justify" }}>
         Welcome to our Timeline Page, This offers a dynamic platform to monitor
         an array of feeds and timelines. This page is your gateway to staying
         informed about news, and developments across various projects and
