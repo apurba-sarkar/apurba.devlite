@@ -7,10 +7,10 @@ import { dateparser } from "./helpers/dateparser";
 import { updateLikes } from "../services/apidata";
 import { useMutation } from "@tanstack/react-query";
 import { useQueryClient } from "@tanstack/react-query";
-// import { useQueryClient } from "@tanstack/react-query";
 import { ToastContainer, toast } from "react-toastify";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Modes } from "../App";
+import HoverBox from "./helpers/HoverBox";
 const Feedpost = ({ data }) => {
   const mode = useContext(Modes);
   // console.log(data);
@@ -34,11 +34,62 @@ const Feedpost = ({ data }) => {
     },
     // if (isLoading) return <PropagateLoader/>;
   });
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div className="mainbox">
       <div>
+        <div
+          style={{
+            display: "flex",
+            gap: ".2rem",
+            alignItems: "center",
+            alignSelf: "start",
+          }}
+          className="container"
+        >
+          <button
+            style={{
+              backgroundColor: "transparent",
+              borderColor: "transparent",
+            }}
+            className="hoverButton"
+            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsHovered(true)}
+          >
+            <img
+              src=" main3.jpg"
+              style={{
+                height: "2.5rem",
+                marginTop: "1rem",
+                borderRadius: "50%",
+              }}
+              alt=""
+            />
+          </button>
+          {isHovered && (
+            <div className="dialogBox">
+              <HoverBox />
+            </div>
+          )}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ color: "var(--main-color)", fontWeight: "bold" }}>
+              Apurba Sarkar
+            </div>
+            <div
+              style={{
+                fontSize: ".7rem",
+                marginTop: "-.3rem",
+                fontWeight: "bold",
+                color: mode ? "white" : "var(--secondary-color)",
+              }}
+            >
+              {dateparser(data.created_at)}
+            </div>
+          </div>
+        </div>
         <div className="h1">{data.heading}</div>
+
         <div
           className="subhead"
           style={{ color: mode ? "var(--dark-grey)" : "initial" }}
@@ -59,8 +110,23 @@ const Feedpost = ({ data }) => {
               justifyContent: "center",
             }}
           >
-            <div style={{ color: mode ? "white" : "initial" }}>
-              {data.status}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+              }}
+            >
+              <img src={data.logo} style={{ height: "5rem" }} alt="" />
+              <div
+                style={{
+                  color: mode ? "white" : "initial",
+                  marginTop: ".5rem",
+                }}
+              >
+                {data.status}
+              </div>
             </div>
           </div>
         )}
@@ -107,10 +173,10 @@ const Feedpost = ({ data }) => {
           </button> */}
           {/* <div>{data.likes}</div> */}
         </div>
-        <div style={{ color: "var(--main-color)", fontWeight: "bold" }}>
+        {/* <div style={{ color: "var(--main-color)", fontWeight: "bold" }}>
           {" "}
           posted at :<span> {dateparser(data.created_at)}</span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-
 import { FaMedium } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -14,7 +13,7 @@ import { Modes } from "../App";
 const Footer = () => {
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
-  const mode = useContext(Modes)
+  const mode = useContext(Modes);
   // console.log(currentYear);
   return (
     <div
@@ -24,12 +23,19 @@ const Footer = () => {
         alignItems: "center",
         justifyContent: "center",
         fontSize: "1.5rem",
-        marginTop:"3rem",
+        marginTop: "3rem",
         // backgroundColor:"red",
-        paddingTop:"1rem"
+        paddingTop: "1rem",
       }}
     >
-      <div style={{ display: "flex", gap: ".4rem", padding: "0 2rem", color: mode ? "white" : "initial", }}>
+      <div
+        style={{
+          display: "flex",
+          gap: ".4rem",
+          padding: "0 2rem",
+          color: mode ? "white" : "initial",
+        }}
+      >
         <FaRssSquare />
         <FaFacebook />
         <FaLinkedin />
@@ -39,7 +45,13 @@ const Footer = () => {
         <BsFillThreadsFill />
         <FaSquareInstagram />
       </div>
-      <div style={{ margin: "1rem 0 4rem 0", fontSize: "1.2rem" }}>
+      <div
+        style={{
+          margin: "1rem 0 4rem 0",
+          fontSize: "1.2rem",
+          color: mode ? "white" : "initial",
+        }}
+      >
         Apurba &copy; {currentYear}
       </div>
     </div>

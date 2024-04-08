@@ -1,0 +1,30 @@
+.datas {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.dlg-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 0.5rem;
+  font-weight: bold;
+
+}
+.btn1 {
+  background-color: var(--main-color);
+}
+
+.btn2 {
+  background-color: var(--secondary-color);
+}
+
+.style{
+    padding:.2rem 2rem;
+    border-radius: .5rem;
+    border: transparent;
+    height: 1.8rem;
+    color: white;
+}
