@@ -59,22 +59,36 @@ const Feedpost = ({ data }) => {
               justifyContent: "center",
             }}
           >
-            <div>sadklaskdlkaldka;l</div>
+            <div style={{ color: mode ? "white" : "initial" }}>
+              {data.status}
+            </div>
           </div>
         )}
-        <div className="desc" style={{ color: mode ? "white" : "initial" }}>
-          {data.desc}
-        </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "start",
-            marginLeft: "-1rem",
-          }}
-        ></div>
 
-        <div className="lnk">{data.links}</div>
+        {data.image1 ? (
+          <>
+            {" "}
+            <div
+              className="desc"
+              style={{ color: mode ? "white" : "initial" }}
+              // style={{ color: "white" }}
+            >
+              {data.desc}
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "start",
+                marginLeft: "-1rem",
+              }}
+            ></div>{" "}
+          </>
+        ) : (
+          ""
+        )}
+
+        {/* <div className="lnk">{data.links}</div> */}
         <div className="tag">{data.tags}</div>
         {data.image1 ? (
           <a className="sourcecode" href={data.link} target="_blank">
