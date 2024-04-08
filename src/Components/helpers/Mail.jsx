@@ -12,11 +12,12 @@ export const Mail = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-    if (form.current != "") {
-      e.preventDefault();
-      form.current.reset();
-      // console.log(form.current);
-    }
+    // if (form.current != "") {
+    //   e.preventDefault();
+    //
+    // }
+    e.preventDefault();
+    console.log(form.current);
 
     emailjs
       .sendForm("service_6ph4o1i", "template_1tb8ale", form.current, {
@@ -25,6 +26,7 @@ export const Mail = () => {
       .then(
         () => {
           toast.success("Mail Send Successfully !");
+          form.current.reset();
         },
         (error) => {
           toast.error("Please try again after sometime");
