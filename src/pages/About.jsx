@@ -16,12 +16,11 @@ const About = () => {
           fontSize: "3rem",
           fontWeight: "bold",
           color: mode ? "white" : "initial",
-          
         }}
       >
         Kon'nichiwa 👋
       </div>
-      <div style={{ color: mode ? "white" : "initial",textAlign:"justify" }}>
+      <div style={{ color: mode ? "white" : "initial", textAlign: "justify" }}>
         I am <span style={{ color: "var(--main-color)" }}> Apurba Sarkar </span>
         . I enjoys bringing ideas to life through coding. I support creative
         coding, that gives you the courage to create anything. I like discussing
@@ -84,22 +83,33 @@ const About = () => {
             </div>
           </div>
 
-          <div>
-            <div style={{ fontWeight: "bold" }}>Others</div>
-            <div className="imgStyle">
-              <img src="git.png" alt="" /> <img src="github.png" alt="" />{" "}
-              <img src="lc2.png" alt="" style={{ width: "6rem" }} />
-              <img src="io.png" alt="" />{" "}
-              <img src="postman.png" alt="" /> <img src="figma.png" alt="" />{" "}
-            </div>
-          </div>
           <div className="imgStyle">
             <div style={{ fontWeight: "bold" }}>Analysis</div>
             <div>
               {" "}
               <img src="excel.png" alt="" /> <img src="powerbi.svg" alt="" />{" "}
               <img src="python.png" alt="" />{" "}
+              <img src="scikit.png" alt="" style={{ width: "5rem" }} />{" "}
+              <img src="tf.png" alt="" />{" "}
               <img src="vba.png" style={{ width: "5rem" }} alt="" />{" "}
+            </div>
+          </div>
+
+          <div>
+            <div style={{ fontWeight: "bold" }}>Others</div>
+            <div className="imgStyle">
+              <img src="git.png" alt="" /> <img src="github.png" alt="" />{" "}
+              <img src="lc2.png" alt="" style={{ width: "6rem" }} />
+              <img src="io.png" alt="" /> <img src="postman.png" alt="" />{" "}
+            </div>
+          </div>
+          <div>
+            <div style={{ fontWeight: "bold" }}>Design</div>
+            <div className="imgStyle">
+          
+              <img src="ps.png" alt="" />{" "}
+              <img src="ai.png"  alt="" />{" "}
+              <img src="figma.png" alt="" />{" "}
             </div>
           </div>
         </div>
@@ -119,7 +129,6 @@ const About = () => {
           display: "flex",
           justifyContent: "center",
           fontSize: "4rem",
-         
         }}
       >
         <div className="buttonStyle custom">
@@ -136,14 +145,25 @@ const About = () => {
       </div>
 
       <div
-        style={{ marginTop: ".5rem", fontSize: "1.2rem", fontWeight: "bold", color: mode ? "white" : "initial", }}
+        style={{
+          marginTop: ".5rem",
+          fontSize: "1.2rem",
+          fontWeight: "bold",
+          color: mode ? "white" : "initial",
+        }}
       >
         Scan, Reach out and say "Hey!". I look forward to hearing from you!
       </div>
       <div>
         <img src="qr.png" alt="" style={{ height: "8rem" }} />
       </div>
-      <div style={{ fontSize: "1.rem", fontWeight: "bold", color: mode ? "white" : "initial", }}>
+      <div
+        style={{
+          fontSize: "1.rem",
+          fontWeight: "bold",
+          color: mode ? "white" : "initial",
+        }}
+      >
         {" "}
         Stay Connected !
       </div>
