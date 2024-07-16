@@ -10,7 +10,7 @@ const Banner = React.memo(() => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const app = new Application(canvas);
-    app.load("https://prod.spline.design/yStt4MBzAqchxgEu/scene.splinecode");
+    app.load("https://prod.spline.design/n75tH-JdvygFzO07/scene.splinecode");
   
     const limitFrameRate = () => {
       let lastFrameTime = Date.now();
