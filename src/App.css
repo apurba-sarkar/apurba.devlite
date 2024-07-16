@@ -106,3 +106,23 @@ body {
 
   
 }
+
+.fl{
+  animation: zinout 2s infinite;
+  background-color: black;
+}
+@keyframes zinout {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+}
+
+.fl-2{
+  background-color: var(--main-color);
+  height: 100vh;
+  /* aspect-ratio: 1; */
+}

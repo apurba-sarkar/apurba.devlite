@@ -5,12 +5,13 @@ import React, { useEffect, useRef } from "react";
 
 // eslint-disable-next-line react/display-name
 const Banner = React.memo(() => {
+  const loaders=["https://prod.spline.design/b11Xog-PChDjiLZT/scene.splinecode"]
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const app = new Application(canvas);
-    app.load("https://prod.spline.design/n75tH-JdvygFzO07/scene.splinecode");
+    app.load(loaders[0]);
   
     const limitFrameRate = () => {
       let lastFrameTime = Date.now();
