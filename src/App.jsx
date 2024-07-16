@@ -68,7 +68,7 @@ const App = () => {
           className="respo"
           style={{ backgroundColor: isDark ? "black" : "initial" }}
         >
-          <AnimatedCursor />
+          {/* <AnimatedCursor /> */}
           <div className="mode">
             <Mode setIsDark={setIsDark} isDark={isDark} />
           </div>
