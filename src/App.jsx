@@ -79,7 +79,7 @@ const App = () => {
                 <Primary /> {/* first component logo and viewer*/}
               </div>
               <Alert />
-              <Banner /> banner
+              <Banner /> 
               <div className="wrapper">
                 <Profile />
                 {/* third component with personal info and stats*/}
