@@ -6,7 +6,7 @@ import { AiFillExperiment } from "react-icons/ai";
 import "./style.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useContext, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import { Modes } from "../App";
 
 const Header2 = () => {
@@ -16,7 +16,9 @@ const Header2 = () => {
     toast("request submitted");
     setEmail("");
   };
-
+  const handleChange = useCallback((e) => {
+    setEmail(e.target.value);
+  }, []);
   return (
     <div style={{ marginTop: "-1rem", color: mode ? "white" : "initial" }}>
       <div
@@ -105,7 +107,7 @@ const Header2 = () => {
                   color: mode ? "white" : "var(--main-color)",
                 }}
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleChange}
               />
             </div>
             <button className="sendbutton" onClick={toster}>
