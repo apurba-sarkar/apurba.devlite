@@ -27,6 +27,10 @@ developer by  $${\color{blue}Apurba Sarkar}$$
 - mailjs
 
 ## Screenshots:
+![Screenshot 2024-07-17 115317](https://github.com/user-attachments/assets/76c6f5ce-f066-4ab6-ba68-daeb84040f50)
+![Screenshot 2024-07-17 115046](https://github.com/user-attachments/assets/c5ad96a5-ca2e-42ee-8aa0-bd0141c102d0)
+![p2](https://github.com/user-attachments/assets/6ebe5973-02f7-430c-99c1-b1b8772d7171)
+![12222](https://github.com/user-attachments/assets/89a1ddd9-567d-43bd-b52a-e7a416578507)
 
 
 
