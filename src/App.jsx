@@ -78,7 +78,7 @@ const App = () => {
               <div className="sticky">
                 <Primary /> {/* first component logo and viewer*/}
               </div>
-              <Alert />
+              {/* <Alert /> */}
               <Banner /> 
               <div className="wrapper">
                 <Profile />
