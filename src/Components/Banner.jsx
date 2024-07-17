@@ -50,13 +50,11 @@ const Banner = React.memo(() => {
     <div className="banner">
       {/* <canvas ref={canvasRef} id="canvas3d" /> */}
       <div style={{color:"var(--main-color)", textAlign:"center"}}>
-        <h3>
-
-       THIS IS A LITE VERSION OF THIS WEBSITE , NO 3D ANIMATIONS AND CUSTOMIZED CURSOR 
-       <br/>
-       END DEVICE NEEDS MORE RESOURCES 
-        </h3>
-        <h3>Full version : <a href="https://apurba-dev.vercel.app" >apurba.dev</a> click here </h3>
+        <h4>
+       THIS IS A LITE VERSION OF THIS WEBSITE , NO 3D ANIMATIONS AND CUSTOMIZED CURSOR. 
+        </h4>
+        <h3>For Full version : <a href="https://apurba-dev.vercel.app" >apurba.dev</a>👈 click here <br/>⚠️ "end device needs for resources"</h3>
+       
       </div>
     </div>
   );
