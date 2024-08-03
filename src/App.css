@@ -41,6 +41,8 @@ a:hover {
   background-blend-mode:lighten */
 }
 
+
+
 @media (width > 60rem ){
   html{
     font-size: 120%;
@@ -51,7 +53,9 @@ a:hover {
 
 }
 
-@media (65em>width > 47rem ){
+
+
+@media (width > 47rem ){
   /* html{
     font-size: 120%;
   } */
